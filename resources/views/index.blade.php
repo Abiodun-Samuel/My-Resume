@@ -56,7 +56,7 @@
                 <div class="col-lg-7">
                     <div class="header">
                         <h2 class="text-center">About Me</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus alias hic quas commodi,
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus alias hic quas
                             eligendi omnis dolor saepe dicta tenetur architecto quis quisquam fuga et rem aut rerum
                             mollitia! Tempore at minima, sint tenetur, possimus consequatur libero molestiae eos sit,
                             placeat non alias officiis nam quidem assumenda eius voluptate quo aliquam ... <span>Abiodun

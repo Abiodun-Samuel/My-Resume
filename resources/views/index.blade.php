@@ -24,18 +24,18 @@
                         </div>
 
                         <div class="hero-icons anim">
-                            <a href=""><img class="no-img img-fluid" src="{{ asset('images/icons/facebook.svg') }}"
-                                    alt="facebook icon"></a>
-                            <a href=""><img class="no-img img-fluid" src="{{ asset('images/icons/twitter.svg') }}"
-                                    alt="twitter icon"></a>
-                            <a href=""><img class="no-img img-fluid" src="{{ asset('images/icons/whatsapp.svg') }}"
-                                    alt="whatsapp icon"></a>
-                            <a href=""><img class="no-img img-fluid" src="{{ asset('images/icons/linkedin.svg') }}"
-                                    alt="linkedin icon"></a>
-                            <a href=""><img class="no-img img-fluid" src="{{ asset('images/icons/instagram.svg') }}"
-                                    alt="instagram icon"></a>
-                            <a href=""><img class="no-img img-fluid" src="{{ asset('images/icons/github.svg') }}"
-                                    alt="github icon"></a>
+                            <a href="https://web.facebook.com/psalmzie007"><img class="no-img img-fluid"
+                                    src="{{ asset('images/icons/facebook.svg') }}" alt="facebook icon"></a>
+                            {{-- <a href=""><img class="no-img img-fluid" src="{{ asset('images/icons/twitter.svg') }}"
+                                    alt="twitter icon"></a> --}}
+                            <a href="https://wa.link/aqutc1"><img class="no-img img-fluid"
+                                    src="{{ asset('images/icons/whatsapp.svg') }}" alt="whatsapp icon"></a>
+                            <a href="https://www.linkedin.com/in/samuel-abiodun-9b9a64168/"><img class="no-img img-fluid"
+                                    src="{{ asset('images/icons/linkedin.svg') }}" alt="linkedin icon"></a>
+                            <a href="https://www.instagram.com/4pointerz/"><img class="no-img img-fluid"
+                                    src="{{ asset('images/icons/instagram.svg') }}" alt="instagram icon"></a>
+                            <a href="https://github.com/Abiodun-Samuel"><img class="no-img img-fluid"
+                                    src="{{ asset('images/icons/github.svg') }}" alt="github icon"></a>
                         </div>
                     </div>
                 </div>
@@ -315,8 +315,8 @@
                                     name="phone" placeholder="WhatsApp">
                             </div> --}}
                             <div class="col-lg-12">
-                                <input class="w-100 shadow-sm" type="text" name="subject" placeholder="Subject"
-                                    id="subject" value="{{ old('subject') }}" maxlength="3">
+                                <input class="w-100 shadow-sm" type="text" name="subject" placeholder="Subject" id="subject"
+                                    value="{{ old('subject') }}" maxlength="3">
                             </div>
                         </div>
                         <div class="form-row my-3">

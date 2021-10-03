@@ -172,6 +172,7 @@ header .nav-link.auth-btn {
     transition: 500ms;
     text-align: center;
     font-weight: 600;
+    border: 1px solid var(--red-1);
 }
 header .nav-link.auth-btn:hover {
     transform: scale(0.97);
@@ -201,7 +202,7 @@ header .nav-link.auth-btn:hover {
     background: inherit;
     transform-origin: 0 100%;
 }
-#hero .hero-text::after {
+/* #hero .hero-text::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -209,7 +210,7 @@ header .nav-link.auth-btn:hover {
     top: 0;
     left: 0;
     background-color: var(--light-0);
-}
+} */
 #hero .hero-text #hi {
     font-family: var(--cookie);
     font-size: 1.5rem;
@@ -243,9 +244,10 @@ header .nav-link.auth-btn:hover {
 #hero .hero-btn a.btn_one {
     position: relative;
     border: 1.5px solid var(--red-1);
+    outline: 1.5px solid transparent;
+    outline-offset: 3px;
     background: var(--red-1);
     color: #f5f5f5;
-    border-radius: 25px;
     padding: 0.2rem 1.2rem;
     font-size: 1rem;
     transition: 500ms;
@@ -253,17 +255,20 @@ header .nav-link.auth-btn:hover {
     font-weight: 600;
     letter-spacing: 0.5px;
     font-size: 1rem;
+    margin-right: 5px;
 }
 #hero .hero-btn a.btn_one:hover {
-    color: var(--red-1);
-    border: 1.5px solid var(--red-1);
-    background-color: inherit;
+    /* color: var(--red-1); */
+    /* background-color: inherit; */
     text-decoration: none;
+    /* outline-offset: 3px; */
+    outline: 1.5px solid var(--red-1);
 }
 #hero .hero-btn a.btn_two {
     position: relative;
-    border-radius: 25px;
     border: 1.5px solid var(--red-1);
+    outline-offset: 3px;
+    outline: 1.5px solid transparent;
     color: var(--red-1);
     transition: 500ms;
     box-shadow: var(--shadow-1);
@@ -271,12 +276,15 @@ header .nav-link.auth-btn:hover {
     letter-spacing: 0.5px;
     padding: 0.2rem 1.2rem;
     font-size: 1rem;
+    margin-left: 5px;
 }
 #hero .hero-btn a.btn_two:hover {
     text-decoration: none;
     color: #ffffff;
-    border: 1.5px solid var(--red-1);
+    /* border: 1.5px solid var(--red-1); */
     background-color: var(--red-1);
+    /* outline-offset: 3.5px; */
+    outline: 1.5px solid var(--red-1);
 }
 #hero .hero-icons {
     margin: 1.5rem 0;
@@ -295,8 +303,9 @@ header .nav-link.auth-btn:hover {
         font-size: 2.5rem;
     }
     #hero .hero-text p {
-        font-size: 1.2rem;
+        font-size: 1.35rem;
         margin: 1.2rem 0;
+        font-weight: 600;
     }
 }
 /* About me  */
@@ -466,7 +475,7 @@ header .nav-link.auth-btn:hover {
     background: var(--light-0);
     padding: 1rem;
     border-radius: 5px;
-    box-shadow: var(--shadow-1);
+    /* box-shadow: var(--shadow-1); */
 }
 .portfolio .portfolio-item {
     /* padding: 1rem 0; */
@@ -566,4 +575,69 @@ header .nav-link.auth-btn:hover {
 }
 #portfolio_page {
     padding: 5rem 0;
+}
+
+/* Authentication style  */
+.auth {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(
+        180deg,
+        var(--black-3) 50%,
+        var(--light-0) 50%
+    );
+}
+
+.auth .auth-card {
+    background-color: #ffffff;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    padding: 1rem;
+}
+.auth h3 {
+    color: var(--red-1);
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: var(--merry);
+}
+.auth .auth-card label {
+    font-size: 0.85rem;
+    color: #212221;
+    margin: 0;
+    font-weight: 500;
+    padding: 0;
+}
+.auth .auth-card input[type="text"],
+.auth .auth-card input[type="password"],
+.auth .auth-card input[type="email"] {
+    padding: 0.4rem 0.5rem;
+    border: 1px solid var(--red-1);
+    outline: 1px solid var(--red-1);
+    width: 100%;
+    font-size: 0.9rem;
+}
+.auth .auth-card p {
+    padding: 2px 0;
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.auth .auth-card button {
+    width: 100%;
+    background-color: var(--red-1);
+    border: 1px solid var(--red-1);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow);
+    transition: 500ms;
+    padding: 10px;
+}
+.auth .auth-card button:hover {
+    transform: scale(0.98);
 }

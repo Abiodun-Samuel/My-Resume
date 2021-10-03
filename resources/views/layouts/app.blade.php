@@ -86,15 +86,12 @@
     <!-- Footer Start -->
     <div class="footer">
         <div class="container">
-            <div class="content-inner">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p>&copy; Copyright 2021. All Rights Reserved</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p>Powered by <a href="https://abiodundigitalhub.tech">Abiodun Digital Hub</a>
-                        <p>
-                    </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="m-0 p-0">&copy; Copyright 2021. All Rights Reserved.</p>
+                    <p class="m-0 p-0">Designed & Developed by <a href="https://abiodundigitalhub.tech">Abiodun
+                            Digital Hub</a>
+                    <p>
                 </div>
             </div>
         </div>

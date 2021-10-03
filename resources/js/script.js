@@ -27,29 +27,29 @@
     }
 
     // load gsap
-    var anim_img = document.querySelector(".anim_img");
-    if (anim_img) {
-        var rule = CSSRulePlugin.getRule("#hero .hero-text:after");
-        var tl = gsap.timeline({
-            defaults: {
-                duration: 0.6,
-            },
-        });
-        tl.to(rule, {
-            cssRule: {
-                scaleY: 0,
-            },
-        })
-            .from(".anim", {
-                y: 50,
-                stagger: 0.3,
-                opacity: 0,
-            })
-            .from(".anim_img", {
-                x: 50,
-                opacity: 0,
-            });
-    }
+    // var anim_img = document.querySelector(".anim_img");
+    // if (anim_img) {
+    //     var rule = CSSRulePlugin.getRule("#hero .hero-text:after");
+    //     var tl = gsap.timeline({
+    //         defaults: {
+    //             duration: 0.6,
+    //         },
+    //     });
+    //     tl.to(rule, {
+    //         cssRule: {
+    //             scaleY: 0,
+    //         },
+    //     })
+    //         .from(".anim", {
+    //             y: 50,
+    //             stagger: 0.3,
+    //             opacity: 0,
+    //         })
+    //         .from(".anim_img", {
+    //             x: 50,
+    //             opacity: 0,
+    //         });
+    // }
 
     var portfolioIsotope = $(".portfolio-container").isotope({
         itemSelector: ".portfolio-item",

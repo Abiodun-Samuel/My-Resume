@@ -6,8 +6,7 @@
             <div class="row">
 
                 <div class="col-lg-6 col-md-7 my-3">
-                    <div class="hero">
-
+                    <div class="hero" data-aos="fade-up">
                         <div class="hero-text">
                             <h1> <span id="hi">Hi There 👋,</span> <br> I'm <span id="hero_name">Samuel</span>, <br> Web <b
                                     id="typed"></b>
@@ -16,11 +15,10 @@
                             </p>
                         </div>
 
-                        <div class="hero-btn anim">
-                            <a class="shadow d-inline-block btn_one" href="#portfolio">Portolio</a>
-                            <a class="shadow d-inline-block btn_two"
-                                href="{{ asset('images/resume/Abiodun Samuel CV.pdf') }}" target="_blank"
-                                download="">Resume</a>
+                        <div class="hero-btn">
+                            <a class="d-inline-block btn_one" href="#portfolio">Portolio</a>
+                            <a class="d-inline-block btn_two" href="{{ asset('images/resume/Abiodun Samuel CV.pdf') }}"
+                                target="_blank" download="">Resume</a>
                         </div>
 
                         <div class="hero-icons anim">
@@ -41,7 +39,7 @@
                 </div>
 
                 <div class="col-lg-5 col-md-5 d-flex justify-content-center my-3">
-                    <div class="hero-img anim_img">
+                    <div class="hero-img" data-aos="fade-up" data-aos-delay="200">
                         <img class="img-fluid no-img" src="{{ asset('images/abiodun-samuel.png') }}"
                             alt="Abiodun Samuel Oluyemi" title="Abiodun Samuel Oluyemi">
                     </div>

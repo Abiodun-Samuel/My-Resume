@@ -37,7 +37,7 @@
     <!-- Bootstrap $ custom Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="{{ mix('css/style.css') }}">
-    
+
 </head>
 
 <body>
@@ -109,7 +109,7 @@
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7479868303462353"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     {{-- <script src="{{ asset('lib/slick/slick.min.js') }}"></script> --}}
     {{-- <script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script> --}}
     {{-- <script src="{{ asset('lib/isotope/isotope.pkgd.min.js') }}"></script> --}}

@@ -333,6 +333,17 @@
             </div>
         </div>
     </section>
+
+    <section>
+        {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7479868303462353"
+                crossorigin="anonymous"></script> --}}
+        <!-- ads -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7479868303462353"
+            data-ad-slot="7817005250" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </section>
 @endsection
 @push('scripts')
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>

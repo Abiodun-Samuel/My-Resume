@@ -1,6 +1,13 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
-mix.js('resources/js/app.js', 'public/js').js('resources/js/script.js', 'public/js').sass('resources/sass/app.scss', 'public/css').postCss('resources/css/style.css', 'public/css').options({
-    processCssUrls: false
-}).sourceMaps().version();
-
+mix.js("resources/js/app.js", "public/js") //bootstrap js
+    .js("resources/js/script_admin.js", "public/js") // admin custom js
+    .js("resources/js/script.js", "public/js") //custom js
+    .sass("resources/sass/app.scss", "public/css") //boostrap css
+    .postCss("resources/css/style.css", "public/css") //custom css
+    .postCss("resources/css/style_admin.css", "public/css") // admin cuatom css
+    .options({
+        processCssUrls: false,
+    })
+    .sourceMaps()
+    .version();

@@ -1,39 +1,62 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap);
-/* Googlefont Poppins CDN Link */
+:root {
+    --shadow-1: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    /* colors  */
+    --light: #f5f5f5;
+    --light-0: #ebeef6;
+    --blue-0: #21f3e7;
+    --blue: #0fabf2;
+    --blue-1: #2196f3;
+    --blue-2: #212df3;
+    --red-2: #ed5860;
+    --red-1: #f37e21;
+    --red-0: #f29e9e;
+    --black-0: #b3b1b1;
+    --black-1: #797878;
+    --black-2: #1d1d1d;
+    --black-3: #292929;
+    --black-4: #4f5150;
+    --black-5: #0f1313;
+    --cookie: "Cookie", cursive;
+    --merry: "Merriweather", serif;
+}
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
-
+a:hover {
+    text-decoration: none;
+}
 .sidebar {
     position: fixed;
     height: 100%;
     width: 240px;
-    background: #242424;
+    background: var(--black-3);
     transition: all 0.5s ease;
 }
 .sidebar.active {
     width: 60px;
 }
-.sidebar .logo-details {
-    height: 80px;
+.sidebar .logo-details a {
     display: flex;
-    align-items: center;
-}
-.sidebar .logo-details i {
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 700;
     color: #fff;
-    min-width: 60px;
     text-align: center;
+    padding: 1rem 1.2rem;
+    font-family: var(--merry);
 }
-.sidebar .logo-details .logo_name {
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
+.sidebar .logo-details span {
+    color: var(--red-1);
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: var(--merry);
 }
+
 .sidebar .nav-links {
     margin-top: 8px;
 }
@@ -43,28 +66,31 @@
     height: 2rem;
 }
 .sidebar .nav-links li a {
+    padding: 0.2rem;
+    border-radius: 10px;
+    margin: 7px 0;
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     text-decoration: none;
     transition: all 0.4s ease;
+    box-shadow: var(--shadow-1);
+    color: var(--blue-1);
 }
 .sidebar .nav-links li a.active {
-    background: #081d45;
+    color: #ffffff;
 }
 .sidebar .nav-links li a:hover {
-    background: #081d45;
+    color: #ffffff;
 }
-.sidebar .nav-links li i {
+.sidebar .nav-links li .iconify {
     min-width: 60px;
     text-align: center;
-    font-size: 18px;
-    color: #fff;
+    font-size: 0.9rem;
 }
 .sidebar .nav-links li a .links_name {
-    color: #fff;
-    font-size: 15px;
+    font-size: 0.9rem;
     font-weight: 400;
     white-space: nowrap;
 }
@@ -88,7 +114,7 @@
 .home-section nav {
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 50px;
     background: #fff;
     display: flex;
     align-items: center;
@@ -107,17 +133,19 @@
 .home-section nav .sidebar-button {
     display: flex;
     align-items: center;
-    font-size: 24px;
     font-weight: 500;
+    cursor: pointer;
 }
-nav .sidebar-button i {
-    font-size: 35px;
+nav .sidebar-button .iconify {
+    font-size: 1.4rem;
     margin-right: 10px;
+    color: var(--red-1);
+    font-weight: 600;
 }
 .home-section nav .search-box {
     position: relative;
-    height: 50px;
-    max-width: 550px;
+    height: 35px;
+    max-width: 250px;
     width: 100%;
     margin: 0 20px;
 }
@@ -125,54 +153,47 @@ nav .search-box input {
     height: 100%;
     width: 100%;
     outline: none;
-    background: #f5f6fa;
-    border: 2px solid #efeef1;
-    border-radius: 6px;
-    font-size: 18px;
-    padding: 0 15px;
+    background: #ffffff;
+    border: 1px solid var(--blue-1);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    padding: 0.2rem 1rem;
+}
+nav .search-box input:focus {
+    border: 1px solid var(--red-2);
 }
 nav .search-box .bx-search {
     position: absolute;
-    height: 40px;
-    width: 40px;
-    background: #2697ff;
-    right: 5px;
+    height: 30px;
+    width: 30px;
+    background: var(--blue-1);
+    right: 1px;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 4px;
-    line-height: 40px;
+    line-height: 30px;
     text-align: center;
     color: #fff;
-    font-size: 22px;
+    font-size: 1rem;
     transition: all 0.4 ease;
+    cursor: pointer;
 }
 .home-section nav .profile-details {
     display: flex;
     align-items: center;
-    background: #f5f6fa;
-    border: 2px solid #efeef1;
     border-radius: 6px;
-    height: 50px;
-    min-width: 190px;
-    padding: 0 15px 0 2px;
+    cursor: pointer;
 }
-nav .profile-details img {
-    height: 40px;
-    width: 40px;
-    border-radius: 6px;
-    -o-object-fit: cover;
-       object-fit: cover;
-}
-nav .profile-details .admin_name {
-    font-size: 15px;
+nav .profile-details a {
+    font-size: 1rem;
     font-weight: 500;
-    color: #333;
     margin: 0 10px;
     white-space: nowrap;
+    color: var(--black-3);
 }
-nav .profile-details i {
-    font-size: 25px;
-    color: #333;
+nav .profile-details .iconify {
+    font-size: 1.5rem;
+    color: var(--red-1);
 }
 .home-section .home-content {
     position: relative;

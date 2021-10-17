@@ -10,4 +10,8 @@ class AdminPageController extends Controller
     {
         return view('admin.index');
     }
+    public function project()
+    {
+        return view('admin.project');
+    }
 }

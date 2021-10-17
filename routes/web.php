@@ -23,3 +23,4 @@ Route::get('/blog', [BlogPageController::class, 'index'])->name('blog.home');
 
 // Admin Routes 
 Route::get('/admin', [AdminPageController::class, 'index'])->name('admin.home');
+Route::get('/admin/projects', [AdminPageController::class, 'project'])->name('admin.project');

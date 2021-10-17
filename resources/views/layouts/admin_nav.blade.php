@@ -44,22 +44,21 @@
 
     <div class="sidebar">
         <div class="logo-details">
-            <i class="bx bxl-c-plus-plus"></i>
-            <span class="logo_name">CodingLab</span>
+            <a href="{{ route('admin.home') }}">A.<span>S</span></a>
         </div>
         <ul class="nav-links">
             <li>
-                <a href="#" class="active">
-                    <i class="bx bx-grid-alt"></i>
+                <a href="{{ route('admin.home') }}" class="active">
+                    <span class="iconify" data-icon="carbon:dashboard-reference"></span>
                     <span class="links_name">Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class="bx bx-box"></i>
-                    <span class="links_name">Product</span>
+                <a href="{{ route('admin.project') }}">
+                    <span class="iconify" data-icon="dashicons:portfolio"></span>
+                    <span class="links_name">Projects</span>
                 </a>
-            </li>
+            {{-- </li>
             <li>
                 <a href="#">
                     <i class="bx bx-list-ul"></i>
@@ -107,10 +106,10 @@
                     <i class="bx bx-cog"></i>
                     <span class="links_name">Setting</span>
                 </a>
-            </li>
+            </li> --}}
             <li class="log_out">
-                <a href="#">
-                    <i class="bx bx-log-out"></i>
+                <a href="{{ route('logout') }}">
+                    <span class="iconify" data-icon="ls:logout"></span>
                     <span class="links_name">Log out</span>
                 </a>
             </li>
@@ -120,7 +119,7 @@
     <section class="home-section">
         <nav>
             <div class="sidebar-button">
-                <i class="bx bx-menu sidebarBtn"></i>
+                <span class="iconify sidebarBtn" data-icon="dashicons:menu-alt3"></span>
                 <span class="dashboard">Dashboard</span>
             </div>
             <div class="search-box">
@@ -128,9 +127,18 @@
                 <i class="bx bx-search"></i>
             </div>
             <div class="profile-details">
-                <img src="images/profile.jpg" alt="" />
-                <span class="admin_name">Prem Shahi</span>
-                <i class="bx bx-chevron-down"></i>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <span class="iconify" data-icon="bx:bxs-user-pin"></span>
+                        Profile
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
             </div>
         </nav>
 
@@ -142,7 +150,7 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    {{-- <script src="{{ mix('js/app.js') }}"></script> --}}
+    <script src="{{ mix('js/app.js') }}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
 

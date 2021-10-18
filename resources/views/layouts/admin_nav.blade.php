@@ -58,7 +58,7 @@
                     <span class="iconify" data-icon="dashicons:portfolio"></span>
                     <span class="links_name">Projects</span>
                 </a>
-            {{-- </li>
+                {{-- </li>
             <li>
                 <a href="#">
                     <i class="bx bx-list-ul"></i>
@@ -118,25 +118,32 @@
 
     <section class="home-section">
         <nav>
-            <div class="sidebar-button">
-                <span class="iconify sidebarBtn" data-icon="dashicons:menu-alt3"></span>
-                <span class="dashboard">Dashboard</span>
-            </div>
-            <div class="search-box">
-                <input type="text" placeholder="Search..." />
-                <i class="bx bx-search"></i>
-            </div>
-            <div class="profile-details">
-                <div class="dropdown">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        <span class="iconify" data-icon="bx:bxs-user-pin"></span>
-                        Profile
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+            <div class="container">
+                <div class="sidebar-button">
+                    <span class="iconify sidebarBtn" data-icon="dashicons:menu-alt3"></span>
+                    <span class="dashboard">Dashboard</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search" />
+                    <span class="iconify" data-icon="fluent:search-square-24-filled"></span>
+                </div>
+                <div class="profile-details">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <span class="iconify" data-icon="bx:bxs-user-pin"></span>
+                            @auth
+                                {{ Str::limit(auth()->user()->name, 3) }}
+                            @endauth
+                            @guest
+                                Name
+                            @endguest
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="{{ route('home') }}">HomePage</a>
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -42,7 +42,7 @@
 
 <body>
     {{-- Navigation --}}
-    <header class="fixed-top">
+    <header class="position-relative">
         <nav id="navbar" class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('home') }}">A.<span>S</span></a>
@@ -71,7 +71,7 @@
                         @auth
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
-                                <button class="nav-link auth-btn">Logout</button>
+                                <button class="nav-link auth-btn p-2">Logout</button>
                             </form>
                         @endauth
                         @guest

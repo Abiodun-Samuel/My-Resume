@@ -47,7 +47,7 @@ html::-webkit-scrollbar-thumb {
 }
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 body {
     position: relative;
@@ -221,9 +221,9 @@ header .nav-link.auth-btn:hover {
     }
 }
 /* Hero Page  */
-
 #hero {
     position: relative;
+    /* overflow-x: hidden; */
 }
 #hero .hero-img-box {
     position: relative;
@@ -305,16 +305,16 @@ header .nav-link.auth-btn:hover {
 }
 #hero .hero-btn a.btn_one:hover {
     text-decoration: none;
-    outline: 1.5px solid var(--red-1);
-    border: 1.5px solid var(--red-1);
-    background: var(--red-1);
+    outline: 1.5px solid var(--purple-4);
+    border: 1.5px solid var(--purple-4);
+    background: var(--purple-4);
 }
 #hero .hero-btn a.btn_two {
     position: relative;
-    border: 1.5px solid var(--red-1);
+    border: 1.5px solid var(--purple-3);
     outline-offset: 3px;
     outline: 1.5px solid transparent;
-    color: var(--red-1);
+    color: var(--purple-3);
     transition: 500ms;
     box-shadow: var(--shadow-1);
     font-weight: 600;
@@ -326,8 +326,8 @@ header .nav-link.auth-btn:hover {
 #hero .hero-btn a.btn_two:hover {
     text-decoration: none;
     color: #ffffff;
-    background-color: var(--red-1);
-    outline: 1.5px solid var(--red-1);
+    background-color: var(--purple-3);
+    outline: 1.5px solid var(--purple-3);
 }
 #hero .hero-icons {
     margin: 1.5rem 0;

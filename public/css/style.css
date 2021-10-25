@@ -47,6 +47,7 @@ html::-webkit-scrollbar-thumb {
 }
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
     position: relative;

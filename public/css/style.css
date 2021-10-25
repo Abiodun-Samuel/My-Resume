@@ -238,10 +238,17 @@ header .nav-link.auth-btn:hover {
     background: var(--purple-3);
 }
 #hero .hero-img-box img {
+    position: relative;
+    display: block;
     max-width: 100%;
-    height: auto;
-    padding: 6rem 0 3rem 0;
+    max-height: auto;
+    background: var(--light-0);
+    margin: 6rem 0 3rem 0;
+    padding: 2.5px;
+    border-radius: 2px;
+    border: 2px solid var(--purple-3);
 }
+
 #hero .hero-img-box .p-quote {
     color: var(--red-1);
     display: block;
@@ -367,15 +374,15 @@ header .nav-link.auth-btn:hover {
 }
 .counts .counters {
     box-shadow: var(--shadow-1);
-    padding: 0.85rem 0.85rem 0.85rem 0.5rem;
+    padding: 0.85rem 0.85rem 0.85rem 0.35rem;
     border-radius: 4px;
     margin: 0.3rem 0;
     background: var(--light-0) url("/images/icons/flower.png") no-repeat;
     background-position: -17.5px -17.5px;
 }
 .counts .counters .iconify {
-    width: 1.9rem;
-    height: 1.9rem;
+    /* width: 1.9rem;
+    height: 1.9rem; */
     margin: 3.5px 0;
 }
 .counts .counters .counter {

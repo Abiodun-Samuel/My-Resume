@@ -3,7 +3,7 @@
 @section('content')
     {{-- hero section --}}
     <div id="hero" class="row">
-        <div class="col-lg-5 col-md-6" data-aos="fade-up">
+        <div class="col-lg-5 col-md-6">
             <div class="hero">
                 <div class="hero-text">
                     <h1> <span id="hi">Hi There 👋,</span> <br> I'm <span id="hero_name">Samuel</span>, <br> Web <b
@@ -35,9 +35,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-7 col-md-6 hero-img-box" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-7 col-md-6 hero-img-box">
             <figure class="d-flex justify-content-center">
-                <img loading="lazy" class="img-fluid my-auto" src="{{ asset('images/profile.jpg') }}" alt="">
+                <img loading="lazy" class="img-fluid" src="{{ asset('images/profile.jpg') }}"
+                    alt="Developer Abiodun Samuel" title="Developer Abiodun Samuel" height="350px" width="311px">
             </figure>
             <div class="p-quote text-center">
                 <p>“Make it <b id="p-quote"></b>" – Kent Beck</p>
@@ -51,42 +52,42 @@
             <div class="row d-flex align-items-stretch">
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
-                        <span class="iconify" data-icon="logos:javascript"></span>
+                        <span class="iconify" data-width="32" data-height="32" data-icon="logos:javascript"></span>
                         <div class="counter">50</div>
                         <p>Javascript</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
-                        <span class="iconify" data-icon="logos:react"></span>
+                        <span class="iconify" data-width="32" data-height="32" data-icon="logos:react"></span>
                         <div class="counter">50</div>
                         <p>React</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
-                        <span class="iconify" data-icon="logos:nodejs"></span>
-                        <div class="counter">50</div>
+                        <span class="iconify" data-width="40" data-height="32" data-icon="logos:nodejs"></span>
+                        <div class="counter">10</div>
                         <p>NodeJs</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
-                        <span class="iconify" data-icon="logos:php"></span>
+                        <span class="iconify" data-width="32" data-height="32" data-icon="logos:php"></span>
                         <div class="counter">50</div>
                         <p>PHP</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
-                        <span class="iconify" data-icon="logos:laravel"></span>
+                        <span class="iconify" data-width="32" data-height="32" data-icon="logos:laravel"></span>
                         <div class="counter">50</div>
                         <p>Laravel</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
-                        <span class="iconify" data-icon="logos:codeigniter"></span>
+                        <span class="iconify" data-width="32" data-height="32" data-icon="logos:codeigniter"></span>
                         <div class="counter">50</div>
                         <p>CodeIgniter</p>
                     </div>
@@ -104,12 +105,10 @@
                 <span>Abiodun Samuel is a ...</span>
                 <ul>
                     <li>
-                        {{-- <p class="mt-0"> --}}
                         versatile web developer with vast expertise in divers front-end,
                         back-end
                         languages and technologies like PHP, Laravel, CodeIgniter, JavaScript, React, NodeJs, MySQL and
                         so on.
-                        {{-- </p> --}}
                     </li>
                 </ul>
 

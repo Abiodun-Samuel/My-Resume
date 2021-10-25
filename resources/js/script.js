@@ -173,7 +173,6 @@ window.onscroll = function () {
 };
 var nav = document.getElementById("navbar");
 var nav_links = document.querySelectorAll(".nav-link");
-console.log(nav_links);
 var sticky = nav.offsetTop;
 
 function myFunction() {

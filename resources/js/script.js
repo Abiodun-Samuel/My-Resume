@@ -15,6 +15,7 @@
 
     // Typejs
     var typejs = document.getElementById("typed");
+    var p_quote = document.getElementById("p-quote");
     if (typejs) {
         var typed = new Typed("#typed", {
             strings: ["Developer", "Designer", "Specialist"],
@@ -23,6 +24,34 @@
             backSpeed: 30,
             loop: true,
             loopCount: Infinity,
+        });
+        var p_quote = new Typed("#p-quote", {
+            strings: ["Work", "Right", "Fast"],
+            smartBackspace: false,
+            typeSpeed: 60,
+            backSpeed: 0,
+            showCursor: false,
+            loop: true,
+            loopCount: Infinity,
+        });
+    }
+
+    //  counterUp
+    const el = document.querySelectorAll(".counter");
+    if (el) {
+        const counterUp = window.counterUp.default;
+        const callback = (entries) => {
+            entries.forEach((entry) => {
+                const el = entry.target;
+                counterUp(el, {
+                    duration: 2000,
+                    delay: 16,
+                });
+            });
+        };
+        const IO = new IntersectionObserver(callback, { threshold: 1 });
+        el.forEach(function (element) {
+            IO.observe(element);
         });
     }
 
@@ -149,13 +178,21 @@ window.onscroll = function () {
     myFunction();
 };
 var nav = document.getElementById("navbar");
+var nav_links = document.querySelectorAll(".nav-link");
+console.log(nav_links);
 var sticky = nav.offsetTop;
 
 function myFunction() {
     if (window.pageYOffset > sticky) {
         nav.classList.add("sticky");
+        nav_links.forEach(function (nav) {
+            nav.classList.add("sticky-nav");
+        });
     } else {
         nav.classList.remove("sticky");
+        nav_links.forEach(function (nav) {
+            nav.classList.remove("sticky-nav");
+        });
     }
 }
 

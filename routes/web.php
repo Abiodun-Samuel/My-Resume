@@ -20,6 +20,7 @@ Route::post("/send_message", [ContactController::class, "store"])->name('send_me
 Route::get('/portfolio', [PortfolioPageController::class, 'index'])->name('portfolio.home');
 
 Route::get('/blog', [BlogPageController::class, 'index'])->name('blog.home');
+Route::get('/contact', [ContactPageController::class, 'index'])->name('contact');
 
 // Admin Routes 
 Route::get('/admin', [AdminPageController::class, 'index'])->name('admin.home');

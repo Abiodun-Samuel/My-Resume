@@ -1,69 +1,133 @@
 @extends('layouts.app')
 
 @section('content')
-    <section id="hero">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-md-7 my-3">
-                    <div class="hero" data-aos="fade-up">
-                        <div class="hero-text">
-                            <h1> <span id="hi">Hi There 👋,</span> <br> I'm <span id="hero_name">Samuel</span>, <br> Web <b
-                                    id="typed"></b>
-                            </h1>
-                            <p>i-Design, i-Develop Innovative Web Solutions for Individuals, Organizations and Companies.
-                            </p>
-                        </div>
-
-                        <div class="hero-btn">
-                            <a class="d-inline-block btn_one" href="#portfolio">Portolio</a>
-                            <a class="d-inline-block btn_two" href="{{ asset('images/resume/Abiodun Samuel CV.pdf') }}"
-                                target="_blank" download="">Resume</a>
-                        </div>
-
-                        <div class="hero-icons anim">
-                            <a href="https://web.facebook.com/psalmzie007"><img class="no-img img-fluid"
-                                    src="{{ asset('images/icons/facebook.svg') }}" alt="facebook icon"></a>
-                            {{-- <a href=""><img class="no-img img-fluid" src="{{ asset('images/icons/twitter.svg') }}"
-                                    alt="twitter icon"></a> --}}
-                            <a href="https://wa.link/aqutc1"><img class="no-img img-fluid"
-                                    src="{{ asset('images/icons/whatsapp.svg') }}" alt="whatsapp icon"></a>
-                            <a href="https://www.linkedin.com/in/samuel-abiodun-9b9a64168/"><img class="no-img img-fluid"
-                                    src="{{ asset('images/icons/linkedin.svg') }}" alt="linkedin icon"></a>
-                            <a href="https://www.instagram.com/4pointerz/"><img class="no-img img-fluid"
-                                    src="{{ asset('images/icons/instagram.svg') }}" alt="instagram icon"></a>
-                            <a href="https://github.com/Abiodun-Samuel"><img class="no-img img-fluid"
-                                    src="{{ asset('images/icons/github.svg') }}" alt="github icon"></a>
-                        </div>
-                    </div>
+    {{-- hero section --}}
+    <div id="hero" class="row">
+        <div class="col-lg-5 col-md-6" data-aos="fade-up">
+            <div class="hero">
+                <div class="hero-text">
+                    <h1> <span id="hi">Hi There 👋,</span> <br> I'm <span id="hero_name">Samuel</span>, <br> Web <b
+                            id="typed"></b>
+                    </h1>
+                    <p>i-Design, i-Develop Innovative Web Solutions for Individuals, Organizations and Companies.
+                    </p>
                 </div>
 
-                <div class="col-lg-5 col-md-5 d-flex justify-content-center my-3">
-                    <div class="hero-img" data-aos="fade-up" data-aos-delay="200">
-                        <img class="img-fluid no-img" src="{{ asset('images/abiodun-samuel.png') }}"
-                            alt="Abiodun Samuel Oluyemi" title="Abiodun Samuel Oluyemi">
+                <div class="hero-btn">
+                    <a class="d-inline-block btn_one" href="#portfolio">Portolio</a>
+                    <a class="d-inline-block btn_two" href="{{ asset('images/resume/Abiodun Samuel CV.pdf') }}"
+                        target="_blank" download="">Resume</a>
+                </div>
+
+                <div class="hero-icons anim">
+                    <a href="https://web.facebook.com/psalmzie007"><img class="no-img img-fluid"
+                            src="{{ asset('images/icons/facebook.svg') }}" alt="facebook icon"></a>
+                    {{-- <a href=""><img class="no-img img-fluid" src="{{ asset('images/icons/twitter.svg') }}"
+                                    alt="twitter icon"></a> --}}
+                    <a href="https://wa.link/aqutc1"><img class="no-img img-fluid"
+                            src="{{ asset('images/icons/whatsapp.svg') }}" alt="whatsapp icon"></a>
+                    <a href="https://www.linkedin.com/in/samuel-abiodun-9b9a64168/"><img class="no-img img-fluid"
+                            src="{{ asset('images/icons/linkedin.svg') }}" alt="linkedin icon"></a>
+                    <a href="https://www.instagram.com/4pointerz/"><img class="no-img img-fluid"
+                            src="{{ asset('images/icons/instagram.svg') }}" alt="instagram icon"></a>
+                    <a href="https://github.com/Abiodun-Samuel"><img class="no-img img-fluid"
+                            src="{{ asset('images/icons/github.svg') }}" alt="github icon"></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 col-md-6 hero-img-box" data-aos="fade-up" data-aos-delay="100">
+            <figure class="d-flex justify-content-center">
+                <img loading="lazy" class="img-fluid my-auto" src="{{ asset('images/profile.jpg') }}" alt="">
+            </figure>
+            <div class="p-quote text-center">
+                <p>“Make it <b id="p-quote"></b>" – Kent Beck</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+        <div class="container">
+            <div class="row d-flex align-items-stretch">
+                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
+                    <div class="counters">
+                        <span class="iconify" data-icon="logos:javascript"></span>
+                        <div class="counter">50</div>
+                        <p>Javascript</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
+                    <div class="counters">
+                        <span class="iconify" data-icon="logos:react"></span>
+                        <div class="counter">50</div>
+                        <p>React</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
+                    <div class="counters">
+                        <span class="iconify" data-icon="logos:nodejs"></span>
+                        <div class="counter">50</div>
+                        <p>NodeJs</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
+                    <div class="counters">
+                        <span class="iconify" data-icon="logos:php"></span>
+                        <div class="counter">50</div>
+                        <p>PHP</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
+                    <div class="counters">
+                        <span class="iconify" data-icon="logos:laravel"></span>
+                        <div class="counter">50</div>
+                        <p>Laravel</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
+                    <div class="counters">
+                        <span class="iconify" data-icon="logos:codeigniter"></span>
+                        <div class="counter">50</div>
+                        <p>CodeIgniter</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- End Counts Section -->
+
+    {{-- about me section --}}
+    <div class="header">
+        <div class="container d-flex justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-center">About Me</h2>
+                <span>Abiodun Samuel is a ...</span>
+                <ul>
+                    <li>
+                        {{-- <p class="mt-0"> --}}
+                        versatile web developer with vast expertise in divers front-end,
+                        back-end
+                        languages and technologies like PHP, Laravel, CodeIgniter, JavaScript, React, NodeJs, MySQL and
+                        so on.
+                        {{-- </p> --}}
+                    </li>
+                </ul>
+
+
+                <p>Performance-driven and Self-motivated Full Stack Web Developer with extensive experience designing,
+                    developing, and deploying web applications.</p>
+                <p>Dedicated and Efficient Web Developer adept at participating in all phases of web development with strong
+                    attention to details and passion for learning new things.
+                </p>
+                <p> My objective is simply to be the
+                    best web
+                    developer that I can be and to contribute to the technology industry at large.</p>
+            </div>
+        </div>
+    </div>
 
     <section id="about">
         <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-7">
-                    <div class="header">
-                        <h2 class="text-center">About Me</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus alias hic quas
-                            eligendi omnis dolor saepe dicta tenetur architecto quis quisquam fuga et rem aut rerum
-                            mollitia! Tempore at minima, sint tenetur, possimus consequatur libero molestiae eos sit,
-                            placeat non alias officiis nam quidem assumenda eius voluptate quo aliquam ... <span>Abiodun
-                                Samuel</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-12">
                     <div class="about">
@@ -117,23 +181,23 @@
         </div>
     </section>
 
+    {{-- portfolio section --}}
+    <div class="header">
+        <div class="container d-flex justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-center">Portfolio</h2>
+                <p>
+                    Here's a catalogue of my projects executed over the years as a Designer | Developer. I've
+                    selected a few of them for your amusement, It's only a drop in the ocean compared to the entire
+                    list. Interested to see more? Visit my
+                    <a href="{{ route('portfolio.home') }}">Portfolio</a>
+                    page.
+                </p>
+            </div>
+        </div>
+    </div>
     <section id="portfolio">
         <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-7">
-                    <div class="header">
-                        <h2 class="text-center">Portfolio</h2>
-                        <p>
-                            Here's a catalogue of my projects executed over the years as a Designer | Developer. I've
-                            selected a few of them for your amusement, It's only a drop in the ocean compared to the entire
-                            list. Interested to see more? Visit my
-                            <a href="{{ route('portfolio.home') }}">Portfolio</a>
-                            page.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
             <div class="portfolio">
                 <div class="row">
                     <div class="col-lg-12 d-flex justify-content-center">
@@ -145,7 +209,7 @@
                     </div>
                 </div>
 
-                <div class="row portfolio-container" data-aos="fade-up">
+                <div class="row d-flex justify-content-center portfolio-container" data-aos="fade-up">
                     {{-- Web Apps --}}
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app p-3">
                         <div class="card">
@@ -313,8 +377,8 @@
                                     name="phone" placeholder="WhatsApp">
                             </div> --}}
                             <div class="col-lg-12">
-                                <input class="w-100 shadow-sm" type="text" name="subject" placeholder="Subject" id="subject"
-                                    value="{{ old('subject') }}" maxlength="3">
+                                <input class="w-100 shadow-sm" type="text" name="subject" placeholder="Subject"
+                                    id="subject" value="{{ old('subject') }}" maxlength="3">
                             </div>
                         </div>
                         <div class="form-row my-3">
@@ -334,16 +398,6 @@
         </div>
     </section>
 
-    <section>
-        {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7479868303462353"
-                crossorigin="anonymous"></script> --}}
-        <!-- ads -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7479868303462353"
-            data-ad-slot="7817005250" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </section>
 @endsection
 @push('scripts')
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>

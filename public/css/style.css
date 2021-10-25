@@ -2,6 +2,14 @@
 :root {
     --shadow-1: 0px 2px 15px rgba(0, 0, 0, 0.1);
     /* colors  */
+    --purple-0: #b8afd5;
+    --purple-1: #a188ad;
+    --purple-2: #7964dd;
+    --purple-3: #634a8e;
+    --purple-4: #231861;
+    --red: #de4a52;
+    --brown: #a86263;
+
     --light: #f5f5f5;
     --light-0: #ebeef6;
     --blue-0: #21f3e7;
@@ -95,7 +103,14 @@ section {
     padding-top: 4.5rem;
     padding-bottom: 4.5rem;
 }
-section .header h2 {
+.header {
+    /* background: var(--black-3); */
+    background: url("/images/backgrounds/header-bg.svg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 1.6rem 0;
+}
+.header h2 {
     position: relative;
     font-weight: 900;
     font-size: 3rem;
@@ -108,7 +123,7 @@ section .header h2 {
     margin: 0;
     padding: 0;
 }
-section .header p {
+.header p {
     font-size: 1rem;
     letter-spacing: 0.6px;
     margin: 1.5rem auto;
@@ -124,15 +139,15 @@ section .header p {
 }
 /* Navigation & header  */
 .navbar {
-    box-shadow: var(--shadow-1);
+    /* box-shadow: var(--shadow-1); */
     transition: 450ms;
     padding-top: 6px;
     padding-bottom: 6px;
-    background: var(--light-0);
 }
+
 #navbar-toggler-icon {
     transition: 500ms;
-    box-shadow: var(--shadow-1);
+    fill: var(--purple-3);
 }
 #navbar-toggler-icon:hover {
     fill: var(--red-1);
@@ -142,57 +157,43 @@ header .navbar-brand {
     font-weight: 900;
     font-size: 2rem;
     font-family: var(--merry);
-    color: var(--black-3);
+    color: var(--purple-3);
 }
 header .navbar-brand span {
     color: var(--red-1);
 }
-header .nav-link {
-    font-weight: 500;
-    color: var(--black-4);
+.navbar-nav {
+    margin-left: 28%;
+}
+.nav-link {
+    font-weight: 600;
+    color: var(--red-1);
     font-size: 1.1rem;
     letter-spacing: 0.5px;
     position: relative;
-    margin: 5px;
-    padding: 5px;
+    margin: 5px 50px 5px 0;
+    padding: 3px 15px;
     border-radius: 0;
 }
-header .nav-link:active {
-    color: var(--red-2);
-}
+header .nav-link:active,
 header .nav-link:hover {
-    color: var(--red-1);
-}
-header .nav-link::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--red-1);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.2s ease-out, opacity 0.2s ease-out 0.3s;
+    color: var(--black-3);
 }
 
-header .nav-link:hover:before {
-    transform: scaleX(1);
-    transform-origin: left;
-}
 header .nav-link.auth-btn {
-    color: #ffffff;
-    background-color: var(--red-1);
+    color: var(--light-0);
+    background-color: var(--purple-3);
     box-shadow: var(--shadow-1);
-    border-radius: 4px;
     transition: 500ms;
     text-align: center;
-    font-weight: 600;
-    border: 1px solid var(--red-1);
+    font-weight: 500;
+    border: 1.1px solid var(--light-0);
 }
 header .nav-link.auth-btn:hover {
-    transform: scale(0.97);
+    color: var(--red-1);
+    border: 1.1px solid var(--red-1);
 }
+
 .sticky {
     top: 0;
     width: 100%;
@@ -200,17 +201,54 @@ header .nav-link.auth-btn:hover {
     padding-top: 0;
     padding-bottom: 0;
     box-shadow: var(--shadow-1);
+    background: var(--light-0);
 }
+.sticky-nav {
+    color: var(--purple-3);
+}
+
 @media screen and (max-width: 991px) {
     .navbar-collapse {
         background: var(--light-0);
         padding: 1rem 0;
     }
+    .navbar {
+        background: var(--light-0);
+    }
+    .navbar-nav {
+        margin-left: 0;
+    }
 }
 /* Hero Page  */
+
 #hero {
     position: relative;
+}
+#hero .hero-img-box {
+    position: relative;
+}
+#hero .hero-img-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 35%;
+    z-index: -1;
+    background: var(--purple-3);
+}
+#hero .hero-img-box img {
+    max-width: 100%;
+    height: auto;
     padding: 6rem 0 3rem 0;
+}
+#hero .hero-img-box .p-quote {
+    color: var(--red-1);
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+#hero .hero {
+    padding: 6rem 0 5rem 3rem;
 }
 #hero .hero-text {
     position: relative;
@@ -218,15 +256,6 @@ header .nav-link.auth-btn:hover {
     background: inherit;
     transform-origin: 0 100%;
 }
-/* #hero .hero-text::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: var(--light-0);
-} */
 #hero .hero-text #hi {
     font-family: var(--cookie);
     font-size: 1.5rem;
@@ -251,7 +280,7 @@ header .nav-link.auth-btn:hover {
     color: var(--black-1);
     font-size: 1.2rem;
     font-weight: 600;
-    font-family: "Courier New", Courier, monospace;
+    letter-spacing: 0.5px;
 }
 #hero .hero-btn {
     margin: 1rem 0;
@@ -259,10 +288,10 @@ header .nav-link.auth-btn:hover {
 
 #hero .hero-btn a.btn_one {
     position: relative;
-    border: 1.5px solid var(--red-1);
-    outline: 1.5px solid transparent;
+    border: 1.5px solid var(--purple-3);
+    outline: 1.5px solid var(--purple-3);
     outline-offset: 3px;
-    background: var(--red-1);
+    background: var(--purple-3);
     color: #f5f5f5;
     padding: 0.2rem 1.2rem;
     font-size: 1rem;
@@ -274,11 +303,10 @@ header .nav-link.auth-btn:hover {
     margin-right: 5px;
 }
 #hero .hero-btn a.btn_one:hover {
-    /* color: var(--red-1); */
-    /* background-color: inherit; */
     text-decoration: none;
-    /* outline-offset: 3px; */
     outline: 1.5px solid var(--red-1);
+    border: 1.5px solid var(--red-1);
+    background: var(--red-1);
 }
 #hero .hero-btn a.btn_two {
     position: relative;
@@ -297,9 +325,7 @@ header .nav-link.auth-btn:hover {
 #hero .hero-btn a.btn_two:hover {
     text-decoration: none;
     color: #ffffff;
-    /* border: 1.5px solid var(--red-1); */
     background-color: var(--red-1);
-    /* outline-offset: 3.5px; */
     outline: 1.5px solid var(--red-1);
 }
 #hero .hero-icons {
@@ -312,6 +338,9 @@ header .nav-link.auth-btn:hover {
     box-shadow: var(--shadow-1);
 }
 @media screen and (max-width: 576px) {
+    #hero .hero {
+        padding-left: 1rem;
+    }
     #hero .hero-text #hi {
         font-size: 1.4rem;
     }
@@ -319,27 +348,65 @@ header .nav-link.auth-btn:hover {
         font-size: 2.5rem;
     }
     #hero .hero-text p {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
         margin: 1.2rem 0;
         font-weight: 600;
     }
 }
-/* About me  */
-#about {
-    position: relative;
-    background-image: linear-gradient(
-        180deg,
-        var(--black-3) 50%,
-        transparent 50%
-    );
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #hero .hero {
+        padding-left: 1.5rem;
+    }
 }
-#about .header span {
+
+/* counter begins  */
+.counts {
+    background: var(--light-0);
+    /* padding: 2rem 0; */
+}
+.counts .counters {
+    box-shadow: var(--shadow-1);
+    padding: 0.85rem 0.85rem 0.85rem 0.5rem;
+    border-radius: 4px;
+    margin: 0.3rem 0;
+    background: var(--light-0) url("/images/icons/flower.png") no-repeat;
+    background-position: -17.5px -17.5px;
+}
+.counts .counters .iconify {
+    width: 1.9rem;
+    height: 1.9rem;
+    margin: 3.5px 0;
+}
+.counts .counters .counter {
+    color: var(--purple-3);
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: var(--merry);
+}
+.counts .counters p {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--merry);
+    color: var(--black-1);
+}
+/* counter ends  */
+
+/* About me  */
+.header span {
     font-family: var(--cookie);
     letter-spacing: 1px;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     font-style: italic;
+    color: var(--red-1);
 }
-#about .content-inner {
+.header ul {
+    list-style: square outside url("/images/icons/flower.png");
+}
+#about {
+    position: relative;
+}
+
+#about #about .content-inner {
     background: var(--light-0);
     border-radius: 5px;
     padding: 2.5rem;
@@ -481,15 +548,10 @@ header .nav-link.auth-btn:hover {
 /* portfolio  */
 #portfolio {
     position: relative;
-    background-image: linear-gradient(
-        180deg,
-        var(--black-3) 50%,
-        transparent 50%
-    );
 }
 #portfolio .portfolio {
     background: var(--light-0);
-    padding: 1rem;
+    /* padding: 1rem; */
     border-radius: 5px;
     /* box-shadow: var(--shadow-1); */
 }

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' =>  'Resume | Abiodun Samuel Oluyemi',
+    'name' =>  'Abiodun Samuel: Full Stack Web Developer.',
 
     /*
     |--------------------------------------------------------------------------

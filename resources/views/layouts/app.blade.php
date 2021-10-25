@@ -63,10 +63,11 @@
                     </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ml-auto">
+                    <div class="navbar-nav">
                         <a class="nav-link active" href="{{ route('home') }}">Home</a>
                         <a class="nav-link" href="{{ route('portfolio.home') }}">Portfolio</a>
                         <a class="nav-link" href="{{ route('blog.home') }}">Blog</a>
+                        <a class="nav-link auth-btn" href="{{ route('contact') }}">Contact</a>
                         @auth
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
@@ -108,8 +109,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7479868303462353"
-        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"> </script>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    {{-- <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7479868303462353"
+        crossorigin="anonymous"></script> --}}
     {{-- <script src="{{ asset('lib/slick/slick.min.js') }}"></script> --}}
     {{-- <script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script> --}}
     {{-- <script src="{{ asset('lib/isotope/isotope.pkgd.min.js') }}"></script> --}}

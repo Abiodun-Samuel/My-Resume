@@ -207,7 +207,7 @@ header .nav-link.auth-btn:hover {
 /* Hero Page  */
 #hero {
     position: relative;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 #hero .hero-img-box {
     position: relative;

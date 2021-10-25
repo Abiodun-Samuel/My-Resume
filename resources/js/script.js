@@ -1,17 +1,11 @@
+// Animate on scroll Init
+AOS.init({
+    once: false,
+    mirror: true,
+    duration: 500,
+});
 (function ($) {
     ("use strict");
-
-    // Animate on scroll Init
-    function aos_init() {
-        AOS.init({
-            once: false,
-            mirror: true,
-            duration: 500,
-        });
-    }
-    $(window).on("load", function () {
-        aos_init();
-    });
 
     // Typejs
     var typejs = document.getElementById("typed");

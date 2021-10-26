@@ -3,7 +3,7 @@
 @section('content')
     {{-- hero section --}}
     <div id="hero" class="row">
-        <div class="col-lg-5 col-md-6">
+        <div class="col-lg-5 col-md-6 hero-text-box">
             <div class="hero">
                 <div class="hero-text">
                     <h1> <span id="hi">Hi There 👋,</span> <br> I'm <span id="hero_name">Samuel</span>, <br> Web <b
@@ -45,8 +45,9 @@
             </div>
         </div>
     </div>
+    {{-- hero section --}}
 
-    <!-- ======= Counts Section ======= -->
+    {{-- Counts Section --}}
     <section id="counts" class="counts">
         <div class="container">
             <div class="row d-flex align-items-stretch">
@@ -95,32 +96,24 @@
             </div>
         </div>
     </section>
-    <!-- End Counts Section -->
+    {{-- Counts Section --}}
 
     {{-- about me section --}}
     <div class="header">
         <div class="container d-flex justify-content-center">
             <div class="col-lg-8">
                 <h2 class="text-center">About Me</h2>
-                <span>Abiodun Samuel is a ...</span>
-                <ul>
-                    <li>
-                        versatile web developer with vast expertise in divers front-end,
-                        back-end
-                        languages and technologies like PHP, Laravel, CodeIgniter, JavaScript, React, NodeJs, MySQL and
-                        so on.
-                    </li>
-                </ul>
-
-
-                <p>Performance-driven and Self-motivated Full Stack Web Developer with extensive experience designing,
-                    developing, and deploying web applications.</p>
-                <p>Dedicated and Efficient Web Developer adept at participating in all phases of web development with strong
-                    attention to details and passion for learning new things.
+                <p>
+                    I'm a Versatile Web Developer with expertise in divers front-end,
+                    back-end languages and technologies, which has made me adept at participating in all phases of web
+                    development.
                 </p>
-                <p> My objective is simply to be the
-                    best web
-                    developer that I can be and to contribute to the technology industry at large.</p>
+                <p>
+                    I'm a Performance-driven and Self-motivated Developer with extensive experience designing, developing,
+                    and
+                    deploying web applications with strong attention to details and passion for learning new things.
+                </p>
+                <p class="span">Abiodun Samuel O.</p>
             </div>
         </div>
     </div>
@@ -128,57 +121,53 @@
     <section id="about">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-lg-12">
-                    <div class="about">
-                        <div class="content-inner">
-                            <div class="row align-items-center">
-                                <div class="col-md-6">
-                                    <div class="exp-col">
-                                        <span>01-Jan-2020 <i>to</i> 31-Dec-2050</span>
-                                        <h3>Codex Solution</h3>
-                                        <h4>San Francisco, CA</h4>
-                                        <h5>Project Manager</h5>
-                                        <p>Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="exp-col">
-                                        <span>01-Jan-2020 <i>to</i> 31-Dec-2050</span>
-                                        <h3>Soft Solution Ltd</h3>
-                                        <h4>San Francisco, CA</h4>
-                                        <h5>Web Developer</h5>
-                                        <p>Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="exp-col">
-                                        <span>01-Jan-2020 <i>to</i> 31-Dec-2050</span>
-                                        <h3>ABC Soft Ltd</h3>
-                                        <h4>San Francisco, CA</h4>
-                                        <h5>Web Designer</h5>
-                                        <p>Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="exp-col">
-                                        <span>01-Jan-2020 <i>to</i> 31-Dec-2050</span>
-                                        <h3>Soft Agency</h3>
-                                        <h4>San Francisco, CA</h4>
-                                        <h5>Graphic Designer</h5>
-                                        <p>Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-9">
+                    <div class="col-lg-6">
+                        <div class="about-tech">
+                            <h3>Front-End</h3>
+                            <ul>
+                                <span class="iconify" data-icon="cib:html5"></span>HTML5 & CSS3
+                                <span class="iconify" data-icon="cib:css3"></span>
+                                <span class="iconify" data-icon="logos:bootstrap"></span>
+                                <li>Bootstrap</li>
+                                <li>Tailwind CSS</li>
+                                <span class="iconify" data-icon="logos:tailwindcss-icon"></span>
+                                <span class="iconify" data-icon="logos:javascript"></span>
+                                <li>JavaScript</li>
+                                <li>JQuery</li>
+                                <span class="iconify" data-icon="logos:jquery"></span>
+                                <li>React</li>
+                                <span class="iconify" data-icon="logos:react"></span>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-tech">
+                            <h3>Back-End</h3>
+                            <p>PHP</p>
+                            <span class="iconify" data-icon="logos:php"></span>
+                            <p>CodeIgniter</p>
+                            <span class="iconify" data-icon="logos:codeigniter"></span>
+                            <p>Laravel</p>
+                            <span class="iconify" data-icon="logos:laravel"></span>
+                            <p>NodeJs</p>
+                            <span class="iconify" data-icon="logos:nodejs"></span>
+                            <p>MySQL</p>
+                            <span class="iconify" data-icon="cib:mysql"></span>
+                            sqlite
+                            <span class="iconify" data-icon="logos:sqlite"></span>
+                            MongoDB
+                            <span class="iconify" data-icon="logos:mongodb"></span>
+
+                            Version Control
+                            <span class="iconify" data-icon="akar-icons:github-fill"></span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    {{-- about me section --}}
 
     {{-- portfolio section --}}
     <div class="header">
@@ -301,24 +290,24 @@
             </div>
         </div>
     </section>
+    {{-- portfolio section --}}
 
+    {{-- contact section --}}
+    <div class="header">
+        <div class="container d-flex justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-center">Contact Me</h2>
+                <p> Do you have an enquiry? Do you have a project that requires my expertise? - I'm available. Feel
+                    free to
+                    drop your message or give me a call, Cheers🥂
+                </p>
+            </div>
+        </div>
+    </div>
     <section id="contact">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-lg-7">
-                    <div class="header">
-                        <h2 class="text-center">Contact Me</h2>
-                        <p> Do you have an enquiry? Do you have a project that requires my expertise? - I'm available. Feel
-                            free to
-                            drop your message or give me a call, Cheers🥂
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row d-flex justify-content-center">
-                {{-- phone and email --}}
-                <div class="col-lg-6 col-md-6 contact-form py-3 mt-3 align-items-stretch">
+                <div class="col-lg-6 col-md-7 contact-form py-3 mt-3 align-items-stretch">
                     <div class="form-row">
                         <div class="col-lg-6 col-md-6 col-sm-6 my-1">
                             <div class="contact-icons shadow-sm text-center p-3">
@@ -396,6 +385,7 @@
             </div>
         </div>
     </section>
+    {{-- contact section --}}
 
 @endsection
 @push('scripts')

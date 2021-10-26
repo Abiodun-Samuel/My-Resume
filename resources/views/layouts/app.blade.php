@@ -67,7 +67,7 @@
                         <a class="nav-link active" href="{{ route('home') }}">Home</a>
                         <a class="nav-link" href="{{ route('portfolio.home') }}">Portfolio</a>
                         <a class="nav-link" href="{{ route('blog.home') }}">Blog</a>
-                        <a class="nav-link auth-btn" href="{{ route('contact') }}">Contact</a>
+                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                         @auth
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf

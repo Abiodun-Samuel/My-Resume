@@ -58,8 +58,7 @@ body {
 }
 main {
     scroll-behavior: smooth;
-    -ms-scroll-snap-type: y mandatory;
-        scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
 }
 .back-to-top {
     position: fixed;
@@ -113,7 +112,6 @@ section {
     scroll-snap-align: start;
 }
 .header {
-    /* background: var(--black-3); */
     background: url("/images/backgrounds/header-bg.svg") no-repeat;
     background-size: cover;
     background-position: center center;
@@ -145,7 +143,6 @@ section {
 }
 /* Navigation & header  */
 .navbar {
-    /* box-shadow: var(--shadow-1); */
     transition: 450ms;
     padding-top: 6px;
     padding-bottom: 6px;
@@ -206,7 +203,6 @@ header .nav-link.auth-btn:hover {
     transition: 450ms;
     padding-top: 0;
     padding-bottom: 0;
-    box-shadow: var(--shadow-1);
     background: var(--light-0);
 }
 .sticky-nav {
@@ -228,7 +224,6 @@ header .nav-link.auth-btn:hover {
 /* Hero Page  */
 #hero {
     position: relative;
-    /* overflow-x: hidden; */
 }
 #hero .hero-img-box {
     position: relative;
@@ -241,7 +236,10 @@ header .nav-link.auth-btn:hover {
     left: 35%;
     z-index: -1;
     background: url("/images/backgrounds/bg.svg");
-    /* background: var(--purple-3); */
+}
+#hero .img-cont {
+    position: relative;
+    overflow: hidden;
 }
 #hero .hero-img-box img {
     position: relative;
@@ -249,12 +247,11 @@ header .nav-link.auth-btn:hover {
     max-width: 100%;
     max-height: auto;
     background: var(--light-0);
-    margin: 6rem 0 3rem 0;
+    margin: 6rem 0 3.5rem 0;
     padding: 2.5px;
     border-radius: 2px;
     border: 2px solid var(--purple-3);
 }
-
 #hero .hero-img-box .p-quote {
     color: var(--red-1);
     display: block;
@@ -376,6 +373,18 @@ header .nav-link.auth-btn:hover {
         padding-left: 1.5rem;
     }
 }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #hero .hero-text h1 {
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    #hero .hero-text h1 {
+        font-size: 2.4rem;
+        margin-bottom: 1.2rem;
+    }
+}
 
 /* counter begins  */
 .counts {
@@ -448,7 +457,7 @@ header .nav-link.auth-btn:hover {
     color: var(--light-0);
 }
 #about .skill-box .iconify {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     transition: 500ms;
     padding: 5px;
     border: 1.5px solid var(--purple--1);

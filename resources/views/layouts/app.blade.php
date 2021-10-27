@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    {{-- <meta name="csrf-token" content="{{ csrf_token() }}" id="csrf-token"> --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}" id="csrf-token">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -21,23 +21,18 @@
     <meta property="og:url" content="https://web.facebook.com/psalmzie007">
 
     <title>{{ config('app.name') }}</title>
-
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicons/favicons-180x180.jpg') }}">
     <link rel="icon" type="image/jpg" sizes="32x32" href="{{ asset('images/favicons/favicons-32x32.jpg') }}">
     <link rel="icon" type="image/jpg" sizes="16x16" href="{{ asset('images/favicons/favicons-16x16.jpg') }}">
     <link rel="manifest" href="{{ asset('mix-manifest.json') }}">
-
     {{-- Google Font --}}
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Merriweather:wght@300;400;700;900&display=swap"
         rel="stylesheet">
-
     <!-- CSS Libraries -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <!-- Bootstrap $ custom Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="{{ mix('css/style.css') }}">
-
 </head>
 
 <body>

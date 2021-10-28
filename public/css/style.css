@@ -603,37 +603,52 @@ header .nav-link.auth-btn:hover {
     height: 50px;
     width: 50px;
 }
+.portfolio .card .card-body {
+    padding: 10px;
+}
 .portfolio .card .card-title {
-    font-weight: 500;
+    font-weight: 600;
     font-family: var(--merry);
+    color: var(--purple-3);
     letter-spacing: 0.5px;
     font-size: 1rem;
+    margin: 0 0 4.5px 0;
 }
-.portfolio .card .card-text span {
-    color: var(--black-1);
-    font-size: 0.75rem;
-    padding: 3px 3px;
-    margin: 0px 3px 4px 0;
+.portfolio .card .card-text {
+    color: var(--black-4);
+    font-size: 0.8rem;
     display: inline-block;
-    border-radius: 4px;
-    background-color: var(--light);
+    padding: 5px 0;
+    margin: 4.5px 0 4.5px 0;
+    line-height: 1.2;
 }
+.portfolio .card .text-stack {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.portfolio .card .tech-stack .iconify {
+    background-color: var(--purple--1);
+    color: var(--purple-2);
+    padding: 3.5px;
+    font-size: 1.6rem;
+}
+
 .portfolio .card a {
-    background-color: inherit;
-    color: var(--red-1);
-    padding: 0.2rem 0.5rem;
-    border: 1.3px solid var(--red-1);
+    padding: 2px 10px;
+    margin: 0 5px;
     text-decoration: none;
-    letter-spacing: 0.5px;
-    font-size: 0.9rem;
-    box-shadow: var(--shadow-1);
+    font-size: 1.2rem;
+    /* box-shadow: var(--shadow-1); */
     transition: 500ms;
-    border-radius: 4px;
+    color: var(--purple-3);
 }
+
 .portfolio .card a:hover {
-    background-color: var(--red-1);
-    color: var(--light);
-    border: 1px solid inherit;
+    background-color: var(--purple-3);
+    color: var(--light-0);
     text-decoration: none;
 }
 /* Other Pages  */

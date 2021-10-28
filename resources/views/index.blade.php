@@ -42,7 +42,6 @@
                 <img loading="lazy" class="img-fluid" src="{{ asset('images/profile.jpg') }}"
                     alt="Developer Abiodun Samuel" title="Developer Abiodun Samuel" height="350px" width="311px">
             </div>
-
             <div class="p-quote text-center">
                 <p>“Make it <b id="p-quote"></b>" – Kent Beck</p>
             </div>
@@ -169,6 +168,7 @@
                         </div>
                     </div>
                     <hr>
+                    {{-- backends --}}
                     <div class="skill-container">
                         {{-- backend --}}
                         <div class="skill-box">
@@ -266,10 +266,40 @@
                         </ul>
                     </div>
                 </div>
-
-                <div class="row d-flex justify-content-center portfolio-container" data-aos="fade-up">
+                {{-- 4 web apps and 2 web designs web app = filter app && web designs = filter card --}}
+                <div class="row portfolio-container" data-aos="fade-up">
                     {{-- Web Apps --}}
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app p-3">
+                        <div class="card">
+                            <div class="state">
+                                <img loading="lazy" src="{{ asset('images/icons/live.svg') }}" class="img-fluid"
+                                    alt="" height="45px" width="45px">
+                            </div>
+                            <img loading="lazy" src="{{ asset('images/portfolio/portfolio-1.jpg') }}"
+                                class="card-img-top" alt="project image" title="project image">
+                            <div class="card-body">
+                                <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
+                                <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorem, nobis?
+                                </p>
+                                <div class="tech-stack">
+                                    <span class="iconify" data-icon="cib:mysql"></span>
+                                    <span class="iconify" data-icon="cib:mongodb"></span>
+                                    <span class="iconify" data-icon="bi:github"></span>
+                                </div>
+                                <div class="mt-3 text-right">
+                                    <a href="#" class="" target="_blank">
+                                        <span class="iconify" data-icon="emojione-monotone:open-book"></span>
+                                    </a>
+                                    <a href="#" class="" target="_blank">
+                                        <span class="iconify" data-icon="carbon:view-filled"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- Web Designs  filter-card --}}
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card p-3">
                         <div class="card">
                             <div class="state">
                                 <img loading="lazy" src="{{ asset('images/icons/live.svg') }}" class="img-fluid"
@@ -278,85 +308,22 @@
                             <img src="{{ asset('images/portfolio/portfolio-1.jpg') }}" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-                                <p class="card-text"> <span>ipsum dolor</span> <span>ipsum dolor</span>
-                                    <span>ipsum
-                                        dolor</span> <span>ipsum dolor</span> <span>ipsum dolor</span>
+                                <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorem, nobis?
                                 </p>
-                                <a href="#" class="" target=" _blank">
-                                    <svg xmlns=" http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        aria-hidden="true" role="img" width="1.5em" height="1.5em"
-                                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                        <rect x="0" y="0" width="24" height="24" fill="none" stroke="none" />
-                                        <g fill="currentColor">
-                                            <circle cx="12" cy="12" r="1.5" />
-                                            <path
-                                                d="M21.87 11.5c-.64-1.11-4.16-6.68-10.14-6.5c-5.53.14-8.73 5-9.6 6.5a1 1 0 0 0 0 1c.63 1.09 4 6.5 9.89 6.5h.25c5.53-.14 8.74-5 9.6-6.5a1 1 0 0 0 0-1zm-9.87 4a3.5 3.5 0 1 1 3.5-3.5a3.5 3.5 0 0 1-3.5 3.5z" />
-                                        </g>
-                                    </svg>
-                                    View
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- Web Designs --}}
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card p-3">
-                        <div class="card">
-                            <div class="state">
-                                <img loading="lazy" src="{{ asset('images/icons/demo.svg') }}" class="img-fluid"
-                                    alt="" height="45px" width="45px">
-                            </div>
-                            <img loading="lazy" src="{{ asset('images/portfolio/portfolio-1.jpg') }}"
-                                class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-                                <p class="card-text"><span>ipsum dolor</span> <span>ipsum dolor</span> <span>ipsum
-                                        dolor</span> <span>ipsum dolor</span> <span>ipsum dolor</span>
-                                </p>
-
-                                <a href="#" class="" target=" _blank">
-                                    <svg xmlns=" http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        aria-hidden="true" role="img" width="1.5em" height="1.5em"
-                                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                        <rect x="0" y="0" width="24" height="24" fill="none" stroke="none" />
-                                        <g fill="currentColor">
-                                            <circle cx="12" cy="12" r="1.5" />
-                                            <path
-                                                d="M21.87 11.5c-.64-1.11-4.16-6.68-10.14-6.5c-5.53.14-8.73 5-9.6 6.5a1 1 0 0 0 0 1c.63 1.09 4 6.5 9.89 6.5h.25c5.53-.14 8.74-5 9.6-6.5a1 1 0 0 0 0-1zm-9.87 4a3.5 3.5 0 1 1 3.5-3.5a3.5 3.5 0 0 1-3.5 3.5z" />
-                                        </g>
-                                    </svg>
-                                    View
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- Web Designs --}}
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card p-3">
-                        <div class="card">
-                            <div class="state">
-                                <img loading="lazy" src="{{ asset('images/icons/demo.svg') }}" class="img-fluid"
-                                    alt="" height="45px" width="45px">
-                            </div>
-                            <img loading="lazy" src="{{ asset('images/portfolio/portfolio-1.jpg') }}"
-                                class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-                                <p class="card-text"><span>ipsum dolor</span> <span>ipsum dolor</span> <span>ipsum
-                                        dolor</span> <span>ipsum dolor</span> <span>ipsum dolor</span>
-                                </p>
-
-                                <a href="#" class="" target=" _blank">
-                                    <svg xmlns=" http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        aria-hidden="true" role="img" width="1.5em" height="1.5em"
-                                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                        <rect x="0" y="0" width="24" height="24" fill="none" stroke="none" />
-                                        <g fill="currentColor">
-                                            <circle cx="12" cy="12" r="1.5" />
-                                            <path
-                                                d="M21.87 11.5c-.64-1.11-4.16-6.68-10.14-6.5c-5.53.14-8.73 5-9.6 6.5a1 1 0 0 0 0 1c.63 1.09 4 6.5 9.89 6.5h.25c5.53-.14 8.74-5 9.6-6.5a1 1 0 0 0 0-1zm-9.87 4a3.5 3.5 0 1 1 3.5-3.5a3.5 3.5 0 0 1-3.5 3.5z" />
-                                        </g>
-                                    </svg>
-                                    View
-                                </a>
+                                <div class="tech-stack">
+                                    <span class="iconify" data-icon="cib:mysql"></span>
+                                    <span class="iconify" data-icon="cib:mongodb"></span>
+                                    <span class="iconify" data-icon="bi:github"></span>
+                                </div>
+                                <div class="mt-3 text-right">
+                                    <a href="#" class="" target="_blank">
+                                        <span class="iconify" data-icon="emojione-monotone:open-book"></span>
+                                    </a>
+                                    <a href="#" class="" target="_blank">
+                                        <span class="iconify" data-icon="carbon:view-filled"></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

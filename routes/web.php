@@ -23,5 +23,5 @@ Route::get('/blog', [BlogPageController::class, 'index'])->name('blog.home');
 Route::get('/contact', [ContactPageController::class, 'index'])->name('contact');
 
 // Admin Routes 
-Route::get('/admin', [AdminPageController::class, 'index'])->name('admin.home');
-Route::get('/admin/projects', [AdminPageController::class, 'project'])->name('admin.project');
+Route::get('/admin', [AdminPageController::class, 'index'])->name('admin.home')->middleware('auth', 'Is_Admin');
+Route::get('/admin/projects', [AdminPageController::class, 'project'])->name('admin.project')->middleware('auth', 'Is_Admin');

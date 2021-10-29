@@ -20,6 +20,7 @@ class Project extends Model
         'slug',
         'user_id',
         'project_link',
+        'github_link',
     ];
     public function user()
     {

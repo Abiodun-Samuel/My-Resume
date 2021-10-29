@@ -56,6 +56,11 @@ body {
     background-color: var(--light-0);
     scroll-behavior: smooth;
 }
+@media screen and (max-width: 576px) {
+    .xs {
+        max-width: 50%;
+    }
+}
 main {
     scroll-behavior: smooth;
     /* scroll-snap-type: y mandatory; */
@@ -528,11 +533,6 @@ header .nav-link.auth-btn:hover {
     background: var(--purple-4);
 }
 
-@media screen and (max-width: 576px) {
-    .xs {
-        max-width: 50%;
-    }
-}
 /* portfolio  */
 #portfolio-header a {
     color: var(--red-1);

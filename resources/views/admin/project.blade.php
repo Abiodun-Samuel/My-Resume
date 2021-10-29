@@ -1,9 +1,9 @@
 @extends('layouts.admin_nav')
 
 @section('content')
-    <section id="projects">
+    <section id="projects" class="content">
         <div class="container">
-            <h3>Projects</h3>
+           
         </div>
     </section>
 

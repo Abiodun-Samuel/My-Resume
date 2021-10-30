@@ -9097,13 +9097,16 @@ body,
 }
 
 .main-footer {
-    padding: 15px;
-    color: #555;
-    border-top: 1px solid #dee2e6;
-    background: #ffffff;
-    /* position: absolute;
-    bottom: 0px; */
-    /* right: 0px; */
+    padding: 10px;
+    color: var(--light);
+    font-size: 0.75rem;
+    background: var(--black-3);
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+}
+.main-footer a {
+    color: var(--purple-2);
 }
 
 .content-header {
@@ -9137,7 +9140,7 @@ body,
 }
 
 .main-header .navbar-nav .nav-item {
-    margin: 0;
+    margin: 2px 0;
 }
 
 .main-header .nav-link {
@@ -9495,6 +9498,7 @@ body,
 
 .sidebar-dark-primary .nav-treeview > .nav-item > .nav-link {
     color: var(--purple-2);
+    font-size: 0.85rem;
 }
 
 .sidebar-dark-primary .nav-treeview > .nav-item > .nav-link:hover {

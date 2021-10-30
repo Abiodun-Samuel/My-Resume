@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    {{-- <main> --}}
     {{-- hero section --}}
     <div id="hero" class="row">
         <div class="col-lg-5 col-md-6 hero-text-box">
@@ -56,42 +55,54 @@
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
                         <span class="iconify" data-width="32" data-height="32" data-icon="logos:javascript"></span>
-                        <div class="counter">50</div>
+                        <div class="counter">
+                            {{ $projects->where('project_category', 'Javascript')->count() }}
+                        </div>
                         <p>Javascript</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
                         <span class="iconify" data-width="32" data-height="32" data-icon="logos:react"></span>
-                        <div class="counter">50</div>
+                        <div class="counter">
+                            {{ $projects->where('project_category', 'React')->count() }}
+                        </div>
                         <p>React</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
                         <span class="iconify" data-width="40" data-height="32" data-icon="logos:nodejs"></span>
-                        <div class="counter">10</div>
+                        <div class="counter">
+                            {{ $projects->where('project_category', 'NodeJs')->count() }}
+                        </div>
                         <p>NodeJs</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
                         <span class="iconify" data-width="32" data-height="32" data-icon="logos:php"></span>
-                        <div class="counter">50</div>
+                        <div class="counter">
+                            {{ $projects->where('project_category', 'PHP')->count() }}
+                        </div>
                         <p>PHP</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
                         <span class="iconify" data-width="32" data-height="32" data-icon="logos:laravel"></span>
-                        <div class="counter">50</div>
+                        <div class="counter">
+                            {{ $projects->where('project_category', 'Laravel')->count() }}
+                        </div>
                         <p>Laravel</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
                         <span class="iconify" data-width="32" data-height="32" data-icon="logos:codeigniter"></span>
-                        <div class="counter">50</div>
+                        <div class="counter">
+                            {{ $projects->where('project_category', 'CodeIgniter')->count() }}
+                        </div>
                         <p>CodeIgniter</p>
                     </div>
                 </div>
@@ -289,6 +300,9 @@
                                 </div>
                                 <div class="mt-3 text-right">
                                     <a href="#" class="" target="_blank">
+                                        <span class="iconify" data-icon="bi:github"></span>
+                                    </a>
+                                    <a href="#" class="" target="_blank">
                                         <span class="iconify" data-icon="emojione-monotone:open-book"></span>
                                     </a>
                                     <a href="#" class="" target="_blank">
@@ -317,6 +331,9 @@
                                     <span class="iconify" data-icon="bi:github"></span>
                                 </div>
                                 <div class="mt-3 text-right">
+                                    <a href="#" class="" target="_blank">
+                                        <span class="iconify" data-icon="bi:github"></span>
+                                    </a>
                                     <a href="#" class="" target="_blank">
                                         <span class="iconify" data-icon="emojione-monotone:open-book"></span>
                                     </a>

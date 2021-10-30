@@ -4,8 +4,23 @@
 
     <section class="content">
         <div class="container-fluid">
-            <!-- Info boxes -->
             <div class="row">
+                <div class="col-6 col-sm-6 col-md-3">
+                    <div class="info-box">
+                        <span class="info-box-icon purple-3-bg elevation-1">
+                            <span class="iconify text-light" data-icon="simple-icons:blogger"></span>
+                        </span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">Blogs</span>
+                            <span class="info-box-number">
+                                {{ $blogs->count() }}
+                            </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+
                 <div class="col-6 col-sm-6 col-md-3">
                     <div class="info-box">
                         <span class="info-box-icon purple-3-bg elevation-1">

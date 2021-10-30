@@ -173,17 +173,18 @@ header .nav-link:hover {
 }
 
 header .nav-link.auth-btn {
-    color: var(--light-0);
-    background-color: var(--purple-3);
+    color: var(--red-1);
+    background-color: inherit;
     box-shadow: var(--shadow-1);
     transition: 500ms;
     text-align: center;
     font-weight: 500;
-    border: 1.1px solid var(--light-0);
+    border: 1.25px solid var(--red-1);
 }
+
 header .nav-link.auth-btn:hover {
-    color: var(--red-1);
-    border: 1.1px solid var(--red-1);
+    color: var(--black-3);
+    border-color: 1.25px solid var(--black-3);
 }
 
 .sticky {
@@ -615,23 +616,26 @@ header .nav-link.auth-btn:hover {
 }
 .portfolio .card .tech-stack .iconify {
     background-color: var(--purple--1);
-    color: var(--purple-2);
-    padding: 3.5px;
-    font-size: 1.6rem;
+    color: var(--purple-3);
+    padding: 3px;
+    font-size: 1.4rem;
 }
 
 .portfolio .card a {
+    display: inline-block;
     padding: 2px 10px;
-    margin: 0 5px;
+    margin: 0 3px;
     text-decoration: none;
     font-size: 1.2rem;
-    /* box-shadow: var(--shadow-1); */
+    border-radius: 10px;
+    box-shadow: var(--shadow-1);
     transition: 500ms;
-    color: var(--purple-3);
+    color: var(--light-0);
+    background: var(--purple-3);
 }
 
 .portfolio .card a:hover {
-    background-color: var(--purple-3);
+    background-color: var(--purple-4);
     color: var(--light-0);
     text-decoration: none;
 }

@@ -1,1 +1,128 @@
+:root {
+    --shadow-1: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    /* colors  */
+    --purple--1: #e4e0ef;
+    --purple-0: #b8afd5;
+    --purple-1: #a188ad;
+    --purple-2: #7964dd;
+    --purple-3: #634a8e;
+    --purple-4: #231861;
+    --red: #de4a52;
+    --brown: #a86263;
+
+    --light: #f5f5f5;
+    --light-0: #ebeef6;
+    --blue-0: #21f3e7;
+    --blue: #0fabf2;
+    --blue-1: #2196f3;
+    --blue-2: #212df3;
+    --red-2: #ed5860;
+    --red-1: #f37e21;
+    --red-0: #f29e9e;
+    --black-0: #e4e4e4;
+    --black-1: #797878;
+    --black-2: #1d1d1d;
+    --black-3: #292929;
+    --black-4: #4f5150;
+    --black-5: #0f1313;
+    --cookie: "Cookie", cursive;
+    --merry: "Merriweather", serif;
+}
+
+/* general styles  */
+#custom_button_styles .tabs {
+    --background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, #e0e0e0);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#custom_button_styles .tabs > .tab {
+    display: flex;
+}
+#custom_button_styles .tabs > .tab:hover {
+    cursor: pointer;
+}
+
+#custom_button_styles .tab > .tab-input {
+    width: 0;
+    height: 0;
+    margin: 0;
+    display: none;
+}
+
+#custom_button_styles .tab > .tab-box {
+    display: block;
+    padding: 2.5px 5px;
+    margin: 5px;
+    border: 1.5px solid var(--purple-1);
+    outline: 1.5px solid inherit;
+    outline-offset: 3px;
+    text-align: center;
+    transition: 0.5s;
+    font-weight: 500;
+    font-size: 0.6rem;
+    color: var(--purple-3);
+}
+
+#custom_button_styles .tab > .tab-input:checked + .tab-box {
+    background: var(--purple-3);
+    border: 1.5px solid var(--purple-3);
+    outline-offset: 3px;
+    outline: 1.5px solid var(--purple-3);
+    color: var(--light-0);
+}
+
+/* admin page styles  */
+/* create new project  */
+#new_project label {
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+#new_project select,
+#new_project input[type="file"],
+#new_project input[type="text"] {
+    padding: 3px 10px;
+    color: var(--black-1);
+    font-size: 0.855rem;
+    border: 1.5px solid var(--purple--1);
+}
+#new_project select:focus,
+#new_project input[type="file"]:focus,
+#new_project input[type="text"]:focus {
+    border: 1.5px solid var(--purple-1);
+    outline: 0.5px solid var(--purple-1);
+}
+#new_project .add_component {
+    color: var(--light-0);
+    background: var(--purple-3);
+    font-size: 0.85rem;
+    padding: 3px 7px;
+    transition: 500ms;
+}
+#new_project .add_component:hover {
+    background: var(--purple-2);
+}
+#new_project .post_btn {
+    position: relative;
+    border: 1.5px solid var(--purple-3);
+    outline: 1.5px solid var(--purple-3);
+    outline-offset: 3px;
+    background: var(--purple-3);
+    color: #f5f5f5;
+    padding: 0.3rem 2rem;
+    font-size: 1rem;
+    transition: 500ms;
+    box-shadow: var(--shadow-1);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    margin-right: 5px;
+    border-radius: 0;
+}
+#new_project .post_btn:hover {
+    text-decoration: none;
+    outline: 1.5px solid var(--purple-4);
+    border: 1.5px solid var(--purple-4);
+    background: var(--purple-4);
+}
 

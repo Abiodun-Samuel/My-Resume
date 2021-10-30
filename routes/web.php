@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BlogPageController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\AdminPageController;
+use App\Http\Controllers\ContactPageController;
 use App\Http\Controllers\AdminProjectController;
 use App\Http\Controllers\PortfolioPageController;
 

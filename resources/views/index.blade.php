@@ -257,94 +257,53 @@
                 <p>
                     Here's a catalogue of my projects executed over the years as a Designer | Developer. I've
                     selected a few of them for your amusement, It's only a drop in the ocean compared to the entire
-                    list. Interested to see more? Visit my
-                    <a href="{{ route('portfolio.home') }}">Portfolio</a>
-                    page.
+                    list. Interested to see more? Visit my porfolio page.
                 </p>
+                <div class="header-link text-center">
+                    <a href="{{ route('portfolio.home') }}">Portfolio</a>
+                </div>
             </div>
         </div>
     </div>
 
     <section id="portfolio">
         <div class="container">
-            <div class="portfolio">
-                <div class="row">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">Web Apps</li>
-                            <li data-filter=".filter-card">Web Designs</li>
-                        </ul>
-                    </div>
-                </div>
-                {{-- 4 web apps and 2 web designs web app = filter app && web designs = filter card --}}
-                <div class="row portfolio-container" data-aos="fade-up">
-                    {{-- Web Apps --}}
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app p-3">
+            <div class="row portfolio">
+                @foreach ($projects as $key => $project)
+                    <div class="col-lg-4 col-md-6 col-sm-6 d-flex align-items-stretch" data-aos="fade-up"
+                        data-aos-delay="{{ $key * 100 }}">
                         <div class="card">
                             <div class="state">
-                                <img loading="lazy" src="{{ asset('images/icons/live.svg') }}" class="img-fluid"
-                                    alt="" height="45px" width="45px">
+                                <img loading="lazy" src="{{ asset('images/icons/' . $project->state . '.svg') }}"
+                                    class="img-fluid" alt=" {{ $project->state }} project"
+                                    title="{{ $project->state }} project" height="45px" width="45px">
                             </div>
-                            <img loading="lazy" src="{{ asset('images/portfolio/portfolio-1.jpg') }}"
-                                class="card-img-top" alt="project image" title="project image">
+                            <img loading="lazy"
+                                src="{{ asset('storage/images/projects/' . $project->project_category . '/' . $project->title . '/' . $project->main_image) }}"
+                                class="card-img-top profile-img" alt="project image" title="project image">
                             <div class="card-body">
-                                <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-                                <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorem, nobis?
-                                </p>
+                                <h5 class="card-title">{{ $project->title }}</h5>
+                                <p class="card-text">{{ $project->description }}</p>
                                 <div class="tech-stack">
-                                    <span class="iconify" data-icon="cib:mysql"></span>
-                                    <span class="iconify" data-icon="cib:mongodb"></span>
-                                    <span class="iconify" data-icon="bi:github"></span>
+                                    @foreach (json_decode($project->tech_stack) as $tech_stack)
+                                        {!! tech_value($tech_stack) !!}
+                                    @endforeach
                                 </div>
                                 <div class="mt-3 text-right">
-                                    <a href="#" class="" target="_blank">
+                                    <a href="{{ $project->github_link }}" class="" target="_blank">
                                         <span class="iconify" data-icon="bi:github"></span>
                                     </a>
-                                    <a href="#" class="" target="_blank">
+                                    <a href="{{ $project->slug }}" class="" target="_blank">
                                         <span class="iconify" data-icon="emojione-monotone:open-book"></span>
                                     </a>
-                                    <a href="#" class="" target="_blank">
+                                    <a href="{{ $project->project_link }}" class="" target="_blank">
                                         <span class="iconify" data-icon="carbon:view-filled"></span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {{-- Web Designs  filter-card --}}
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card p-3">
-                        <div class="card">
-                            <div class="state">
-                                <img loading="lazy" src="{{ asset('images/icons/live.svg') }}" class="img-fluid"
-                                    alt="" height="45px" width="45px">
-                            </div>
-                            <img src="{{ asset('images/portfolio/portfolio-1.jpg') }}" class="card-img-top" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-                                <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Dolorem, nobis?
-                                </p>
-                                <div class="tech-stack">
-                                    <span class="iconify" data-icon="cib:mysql"></span>
-                                    <span class="iconify" data-icon="cib:mongodb"></span>
-                                    <span class="iconify" data-icon="bi:github"></span>
-                                </div>
-                                <div class="mt-3 text-right">
-                                    <a href="#" class="" target="_blank">
-                                        <span class="iconify" data-icon="bi:github"></span>
-                                    </a>
-                                    <a href="#" class="" target="_blank">
-                                        <span class="iconify" data-icon="emojione-monotone:open-book"></span>
-                                    </a>
-                                    <a href="#" class="" target="_blank">
-                                        <span class="iconify" data-icon="carbon:view-filled"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -444,13 +403,11 @@
         </div>
     </section>
     {{-- contact section --}}
-    {{-- </main> --}}
+
 @endsection
 @push('scripts')
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
     {{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js"></script> --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
-        integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 @endpush

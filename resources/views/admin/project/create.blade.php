@@ -234,7 +234,7 @@
                         <div class="form-row my-3">
                             <div class="input-group-btn">
                                 <button class="btn add_component" type="button">
-                                    Upload Images
+                                    Add Images
                                 </button>
                             </div>
                         </div>

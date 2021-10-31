@@ -31,3 +31,6 @@ Route::get('/admin', [AdminPageController::class, 'index'])->name('admin.home')-
 Route::get('/admin/project', [AdminProjectController::class, 'index'])->name('admin.project.index')->middleware('auth', 'Is_Admin');
 Route::get('/admin/project/create', [AdminProjectController::class, 'create'])->name('admin.project.create')->middleware('auth', 'Is_Admin');
 Route::post('/admin/project/post', [AdminProjectController::class, 'store'])->name('admin.project.post')->middleware('auth', 'Is_Admin');
+Route::get('/admin/{project:slug}/edit', [AdminProjectController::class, 'edit'])->name('admin.project.edit')->middleware('auth', 'Is_Admin');
+Route::put('/admin/{project:slug}/update', [AdminProjectController::class, 'update'])->name('admin.project.update')->middleware('auth', 'Is_Admin');
+Route::delete('/admin/{project:slug}', [AdminProjectController::class, 'destroy'])->name('admin.project.destroy')->middleware('auth', 'Is_Admin');

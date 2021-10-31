@@ -269,8 +269,8 @@
     <section id="portfolio">
         <div class="container">
             <div class="row portfolio">
-                @foreach ($projects as $key => $project)
-                    <div class="col-lg-4 col-md-6 col-sm-6 d-flex align-items-stretch" data-aos="fade-up"
+                @foreach ($portfolio as $key => $project)
+                    <div class="col-lg-4 col-md-6 col-sm-6 my-2 d-flex align-items-stretch" data-aos="fade-up"
                         data-aos-delay="{{ $key * 100 }}">
                         <div class="card">
                             <div class="state">
@@ -280,7 +280,8 @@
                             </div>
                             <img loading="lazy"
                                 src="{{ asset('storage/images/projects/' . $project->project_category . '/' . $project->title . '/' . $project->main_image) }}"
-                                class="card-img-top profile-img" alt="project image" title="project image">
+                                class="img-fluid profile-img bg-secondary" alt="{{ $project->title }}"
+                                title="{{ $project->title }}" height="226px" width="auto">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $project->title }}</h5>
                                 <p class="card-text">{{ $project->description }}</p>
@@ -293,7 +294,7 @@
                                     <a href="{{ $project->github_link }}" class="" target="_blank">
                                         <span class="iconify" data-icon="bi:github"></span>
                                     </a>
-                                    <a href="{{ $project->slug }}" class="" target="_blank">
+                                    <a href="{{ url($project->slug) }}" class="" target="_blank">
                                         <span class="iconify" data-icon="emojione-monotone:open-book"></span>
                                     </a>
                                     <a href="{{ $project->project_link }}" class="" target="_blank">

@@ -72,6 +72,44 @@
     color: var(--light-0);
 }
 
+/* admin project table  */
+#myTable_wrapper select,
+#myTable_wrapper input[type="search"] {
+    padding: 3px 10px;
+    font-size: 0.8rem;
+    border: 1px solid var(--purple-0);
+    outline: none;
+}
+#myTable_wrapper select:focus,
+#myTable_wrapper input[type="search"]:focus {
+    border-color: var(--red);
+    outline: none;
+}
+/* #myTable_info */
+#myTable_wrapper .dataTables_info {
+    font-size: 0.8rem;
+    color: var(--purple-3);
+    font-weight: 500;
+}
+#myTable_wrapper .paginate_button {
+    font-size: 0.8rem;
+    color: var(--purple-3);
+    font-weight: 500;
+}
+#myTable_wrapper span a.paginate_button.current {
+    font-size: 0.8rem;
+    background: var(--purple-1);
+    color: var(--light-0);
+    font-weight: 500;
+    padding: 2px 5px;
+}
+
+#myTable_wrapper label {
+    color: var(--purple-3);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 /* admin page styles  */
 /* create new project  */
 #new_project label {
@@ -125,4 +163,3 @@
     border: 1.5px solid var(--purple-4);
     background: var(--purple-4);
 }
-

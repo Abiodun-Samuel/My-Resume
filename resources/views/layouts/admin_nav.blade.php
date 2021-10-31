@@ -30,7 +30,9 @@
     {{-- Google Font --}}
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Merriweather:wght@300;400;700;900&display=swap"
         rel="stylesheet">
+
     <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.css') }}">
@@ -315,6 +317,7 @@
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
     <!-- AdminLTE App -->
     <script src="{{ asset('dist/js/adminlte.js') }}"></script>

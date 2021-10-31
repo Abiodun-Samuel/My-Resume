@@ -546,8 +546,8 @@ header .nav-link.auth-btn:hover {
     overflow: hidden;
     z-index: 1;
     box-shadow: var(--shadow-1);
-    border: 0;
-    border-radius: 4px;
+    border: none;
+    border-radius: 3px;
     background-color: #fff;
     transition: 500ms;
 }

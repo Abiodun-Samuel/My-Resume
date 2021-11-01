@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class PortfolioPageController extends Controller
+class ProjectPageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class PortfolioPageController extends Controller
      */
     public function index()
     {
-        return view('portfolio.home');
+        return view('project.index');
     }
 
     /**
@@ -40,12 +41,13 @@ class PortfolioPageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $project = DB::table('projects')->where('slug', $slug)->first();
+        return view('project.show', compact('project'));
     }
 
     /**

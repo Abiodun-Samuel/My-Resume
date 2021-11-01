@@ -34,7 +34,7 @@
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">S/N</th>
-                                    <th scope="col">N. Img</th>
+                                    <th scope="col">Img</th>
                                     <th scope="col">Title</th>
                                     <th scope="col">State</th>
                                     <th scope="col">Tech</th>

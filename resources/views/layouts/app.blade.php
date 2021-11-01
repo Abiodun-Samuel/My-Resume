@@ -30,6 +30,7 @@
         rel="stylesheet">
     <!-- CSS Libraries -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.css" />
     <!-- Bootstrap $ custom Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="{{ mix('css/style.css') }}">
@@ -60,7 +61,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link active" href="{{ route('home') }}">Home</a>
-                        <a class="nav-link" href="{{ route('portfolio.home') }}">Portfolio</a>
+                        <a class="nav-link" href="{{ route('project.index') }}">Portfolio</a>
                         <a class="nav-link" href="{{ route('blog.home') }}">Blog</a>
                         <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                         @auth
@@ -81,7 +82,7 @@
     @yield('content')
 
     <!-- Footer Start -->
-    <div class="footer">
+    <div id="footer" class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -105,6 +106,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"> </script>
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.js"></script>
+
     @stack('scripts')
     <!-- Custom Javascript -->
     <script src="{{ mix('js/script.js') }}"></script>

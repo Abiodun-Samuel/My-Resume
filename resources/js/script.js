@@ -74,6 +74,21 @@ AOS.init({
     //         });
     // }
 
+    // Portfolio details gallery display
+    // venobox
+    var veno = document.querySelector(".venobox");
+    if (veno) {
+        $(".venobox").venobox({
+            numeratio: true,
+            autoplay: true,
+            arrowsColor: "#d58943",
+            numerationPosition: "bottom",
+            spinner: "cube-grid",
+            spinColor: "#d58943",
+            closeColor: "#d58943",
+        });
+    }
+
     // Smooth scrolling on the navbar links
     $(".btn_one").on("click", function (event) {
         if (this.hash !== "") {

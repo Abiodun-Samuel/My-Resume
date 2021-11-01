@@ -6,6 +6,7 @@ use App\Http\Controllers\BlogPageController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\AdminPageController;
 use App\Http\Controllers\ContactPageController;
+use App\Http\Controllers\ProjectPageController;
 use App\Http\Controllers\AdminProjectController;
 use App\Http\Controllers\PortfolioPageController;
 
@@ -18,8 +19,10 @@ Route::get('/', [HomePageController::class, 'index'])->name('home');
 // ContactController
 Route::post("/send_message", [ContactController::class, 'store'])->name('send_message');
 
-//Other Page Controller
-Route::get('/portfolio', [PortfolioPageController::class, 'index'])->name('portfolio.home');
+//Project Page Controller
+Route::get('/projects', [ProjectPageController::class, 'index'])->name('project.index');
+Route::get('/projects/{project:slug}', [ProjectPageController::class, 'show'])->name('project.show');
+
 
 Route::get('/blog', [BlogPageController::class, 'index'])->name('blog.home');
 Route::get('/contact', [ContactPageController::class, 'index'])->name('contact');

@@ -260,7 +260,7 @@
                     list. Interested to see more? Visit my porfolio page.
                 </p>
                 <div class="header-link text-center">
-                    <a href="{{ route('portfolio.home') }}">Portfolio</a>
+                    <a href="{{ route('project.index') }}">Portfolio</a>
                 </div>
             </div>
         </div>
@@ -291,13 +291,13 @@
                                     @endforeach
                                 </div>
                                 <div class="mt-3 text-right">
-                                    <a href="{{ $project->github_link }}" class="" target="_blank">
+                                    <a href="{{ $project->github_link }}" target="_blank">
                                         <span class="iconify" data-icon="bi:github"></span>
                                     </a>
-                                    <a href="{{ url($project->slug) }}" class="" target="_blank">
+                                    <a href="{{ route('project.show', $project->slug) }}" target="_blank">
                                         <span class="iconify" data-icon="emojione-monotone:open-book"></span>
                                     </a>
-                                    <a href="{{ $project->project_link }}" class="" target="_blank">
+                                    <a href="{{ $project->project_link }}" target="_blank">
                                         <span class="iconify" data-icon="carbon:view-filled"></span>
                                     </a>
                                 </div>

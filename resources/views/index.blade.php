@@ -292,7 +292,7 @@
                                         {!! tech_value($tech_stack) !!}
                                     @endforeach
                                 </div>
-                                <div class="mt-3 text-right">
+                                <div class="mt-3 text-right project_btn">
                                     <a href="{{ $project->github_link }}" target="_blank">
                                         <span class="iconify" data-icon="bi:github"></span>
                                     </a>

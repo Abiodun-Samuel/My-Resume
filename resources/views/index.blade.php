@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="hero-btn">
-                    <a class="d-inline-block btn_one" href="#portfolio">Portolio</a>
+                    <a class="d-inline-block btn_one" href="#portfolio">Portfolio</a>
                     <a class="d-inline-block btn_two" href="{{ asset('images/resume/Abiodun Samuel CV.pdf') }}"
                         target="_blank" download="">Resume</a>
                 </div>
@@ -283,7 +283,9 @@
                                 class="img-fluid profile-img bg-secondary" alt="{{ $project->title }}"
                                 title="{{ $project->title }}" height="226px" width="auto">
                             <div class="card-body">
-                                <h5 class="card-title">{{ $project->title }}</h5>
+                                <h5 class="card-title"><a
+                                        href="{{ route('project.show', $project->slug) }}">{{ $project->title }}</a>
+                                </h5>
                                 <p class="card-text">{{ $project->description }}</p>
                                 <div class="tech-stack">
                                     @foreach (json_decode($project->tech_stack) as $tech_stack)

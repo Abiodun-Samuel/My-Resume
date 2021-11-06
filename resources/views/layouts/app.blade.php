@@ -25,9 +25,7 @@
     <link rel="icon" type="image/jpg" sizes="32x32" href="{{ asset('images/favicons/favicons-32x32.jpg') }}">
     <link rel="icon" type="image/jpg" sizes="16x16" href="{{ asset('images/favicons/favicons-16x16.jpg') }}">
     <link rel="manifest" href="{{ asset('mix-manifest.json') }}">
-    {{-- Google Font --}}
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Merriweather:wght@300;400;700;900&display=swap"
-        rel="stylesheet">
+
     <!-- CSS Libraries -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.css" />
@@ -97,8 +95,17 @@
     <!-- Footer Start -->
 
     <!-- Back to Top -->
-    <a href="" class="back-to-top"> <img class="img-fluid" src="{{ asset('images/icons/up.svg') }}"
-            alt="Go Up"></a>
+    <a class="back-to-top" title="Back to top">
+        <svg width="2.3em" height="2.3em" viewBox="0 0 16 16">
+            <g fill="#f37e21">
+                <path fill-rule="evenodd"
+                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 8.354a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 6.207V11a.5.5 0 0 1-1 0V6.207L5.354 8.354z" />
+            </g>
+        </svg>
+    </a>
+
+    {{-- <a href="" class="back-to-top"> <img class="img-fluid" src="{{ asset('images/icons/up.svg') }}"
+            alt="Go Up"></a> --}}
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

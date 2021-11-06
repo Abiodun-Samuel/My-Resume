@@ -8,27 +8,27 @@ AOS.init({
     ("use strict");
 
     // Typejs
-    var typejs = document.getElementById("typed");
-    var p_quote = document.getElementById("p-quote");
-    if (typejs) {
-        var typed = new Typed("#typed", {
-            strings: ["Developer", "Designer", "Specialist"],
-            smartBackspace: true,
-            typeSpeed: 60,
-            backSpeed: 30,
-            loop: true,
-            loopCount: Infinity,
-        });
-        var p_quote = new Typed("#p-quote", {
-            strings: ["Work", "Right", "Fast"],
-            smartBackspace: false,
-            typeSpeed: 60,
-            backSpeed: 0,
-            showCursor: false,
-            loop: true,
-            loopCount: Infinity,
-        });
-    }
+    // var typejs = document.getElementById("typed");
+    // var p_quote = document.getElementById("p-quote");
+    // if (typejs) {
+    //     var typed = new Typed("#typed", {
+    //         strings: ["Developer", "Designer"],
+    //         smartBackspace: true,
+    //         typeSpeed: 60,
+    //         backSpeed: 30,
+    //         loop: true,
+    //         loopCount: Infinity,
+    //     });
+    //     var p_quote = new Typed("#p-quote", {
+    //         strings: ["Work", "Right", "Fast"],
+    //         smartBackspace: false,
+    //         typeSpeed: 60,
+    //         backSpeed: 0,
+    //         showCursor: false,
+    //         loop: true,
+    //         loopCount: Infinity,
+    //     });
+    // }
 
     //  counterUp
     const el = document.querySelectorAll(".counter");
@@ -109,65 +109,61 @@ AOS.init({
         }
     });
 
-    // Porfolio isotope and filter
-    // var portfolioIsotope = $('.portfolio-container').isotope({
-    //     itemSelector: '.portfolio-item',
-    //     layoutMode: 'fitRows'
-    // });
-
-    // $('#portfolio-flters li').on('click', function () {
-    //     $("#portfolio-flters li").removeClass('filter-active');
-    //     $(this).addClass('filter-active');
-
-    //     portfolioIsotope.isotope({filter: $(this).data('filter')});
-    // });
-
-    // Review slider
-    // $('.review-slider').slick({
-    //     autoplay: true,
-    //     dots: false,
-    //     infinite: true,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1
-    // });
-
     // Back to top button
-    $(window).on("scroll", function () {
-        if ($(this).scrollTop() > 100) {
-            $(".back-to-top").fadeIn("slow");
-        } else {
-            $(".back-to-top").fadeOut("slow");
-        }
+    jQuery(function () {
+        $(window).on("scroll", function () {
+            if ($(this).scrollTop() > 100) {
+                $(".back-to-top").fadeIn("slow");
+            } else {
+                $(".back-to-top").fadeOut("slow");
+            }
+        });
+        $(".back-to-top").on("click", function () {
+            $("html, body").animate(
+                {
+                    scrollTop: 0,
+                },
+                500
+            );
+            return false;
+        });
     });
-    $(".back-to-top").on("click", function () {
-        $("html, body").animate({ scrollTop: 0 }, 1000, "linear");
-        return false;
-    });
+    // $(window).on("scroll", function () {
+    //     if ($(this).scrollTop() > 100) {
+    //         $(".back-to-top").fadeIn("slow");
+    //     } else {
+    //         $(".back-to-top").fadeOut("slow");
+    //     }
+    // });
+    // $(".back-to-top").on("click", function () {
+    //     $("html, body").animate({ scrollTop: 0 }, 1000, "linear");
+    //     return false;
+    // });
 })(jQuery);
 
-// make console color white
-// console._log = console.log;
-// console.log = function (log) {
-//     return console._log(`%c ${log}`, "color:rgba(255,255,255,0)");
-// };
+(function () {
+    // make console color white
+    console._log = console.log;
+    console.log = function (log) {
+        return console._log(`%c ${log}`, "color:rgba(255,255,255,0)");
+    };
 
-//prevent console script
-// (function () {
-//     if (!$("body").hasClass("debug_mode")) {
-//         var _z = console;
-//         Object.defineProperty(window, "console", {
-//             get: function () {
-//                 if ((window && window._z && window._z._commandLineAPI) || {}) {
-//                     throw "Go away motherfucker!";
-//                 }
-//                 return _z;
-//             },
-//             set: function (val) {
-//                 _z = val;
-//             },
-//         });
-//     }
-// })();
+    //prevent console script
+    if (!$("body").hasClass("debug_mode")) {
+        var _z = console;
+        Object.defineProperty(window, "console", {
+            get: function () {
+                if ((window && window._z && window._z._commandLineAPI) || {}) {
+                    throw "Go away motherfucker!";
+                }
+                return _z;
+            },
+            set: function (val) {
+                _z = val;
+            },
+        });
+    }
+})();
 
 // Navbar scroll effects
 window.onscroll = function () {

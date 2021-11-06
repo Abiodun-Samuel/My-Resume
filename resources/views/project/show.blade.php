@@ -46,9 +46,9 @@
                             <li><strong>Category</strong>: {{ $project->project_category }}</li>
                             <li><strong>Client</strong>: {{ $project->title }}</li>
                             <li><strong>Project date</strong>: {{ $project->created_at }}</li>
-                            <li><strong>Project URL</strong>: <a
+                            <li><strong>Project URL</strong>: <a target="_blank"
                                     href="{{ $project->project_link }}">{{ $project->project_link }}</a></li>
-                            <li><strong>Github URL</strong>: <a
+                            <li><strong>Github URL</strong>: <a target="_blank"
                                     href="{{ $project->github_link }}">{{ $project->github_link }}</a>
                             </li>
                         </ul>

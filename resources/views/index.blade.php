@@ -6,33 +6,34 @@
         <div class="col-lg-5 col-md-6 hero-text-box">
             <div class="hero">
                 <div class="hero-text">
-                    <h1> <span id="hi">Hi There 👋,</span> <br> I'm <span id="hero_name">Samuel</span>, <br> Web <b
-                            id="typed"></b>
+                    <p id="hi">Hi There 👋,</p>
+                    <h1> I'm <span id="hero_name">Samuel</span>, <br> Web <b id="typed"> Developer</b>
                     </h1>
                     <p>i-Design, i-Develop Innovative Web Solutions for Individuals, Organizations and Companies.
                     </p>
                 </div>
 
                 <div class="hero-btn">
-                    <a class="d-inline-block btn_one" href="#portfolio">Portfolio</a>
+                    <a class="d-inline-block btn_one" href="{{ route('project.index') }}">Portfolio</a>
                     <a class="d-inline-block btn_two" href="{{ asset('images/resume/Abiodun Samuel CV.pdf') }}"
                         target="_blank" download="">Resume</a>
                 </div>
 
                 <div class="hero-icons anim">
-                    <a href="https://web.facebook.com/psalmzie007"><img loading="lazy" class="no-img img-fluid"
-                            src="{{ asset('images/icons/facebook.svg') }}" alt="facebook icon"></a>
-                    {{-- <a href=""><img loading="lazy" class="no-img img-fluid" src="{{ asset('images/icons/twitter.svg') }}"
-                                    alt="twitter icon"></a> --}}
-                    <a href="https://wa.link/aqutc1"><img loading="lazy" class="no-img img-fluid"
-                            src="{{ asset('images/icons/whatsapp.svg') }}" alt="whatsapp icon"></a>
-                    <a href="https://www.linkedin.com/in/samuel-abiodun-9b9a64168/"><img loading="lazy"
-                            class="no-img img-fluid" src="{{ asset('images/icons/linkedin.svg') }}"
-                            alt="linkedin icon"></a>
-                    <a href="https://www.instagram.com/4pointerz/"><img loading="lazy" class="no-img img-fluid"
-                            src="{{ asset('images/icons/instagram.svg') }}" alt="instagram icon"></a>
-                    <a href="https://github.com/Abiodun-Samuel"><img loading="lazy" class="no-img img-fluid"
-                            src="{{ asset('images/icons/github.svg') }}" alt="github icon"></a>
+                    <a href="https://web.facebook.com/psalmzie007">
+                        <span class="iconify" data-icon="entypo-social:facebook"></span></a>
+                    <a href="https://wa.link/aqutc1">
+                        <span class="iconify" data-icon="akar-icons:whatsapp-fill"></span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/samuel-abiodun-9b9a64168/">
+                        <span class="iconify" data-icon="akar-icons:linkedin-fill"></span>
+                    </a>
+                    <a href="https://www.instagram.com/4pointerz/">
+                        <span class="iconify" data-icon="akar-icons:instagram-fill"></span>
+                    </a>
+                    <a href="https://github.com/Abiodun-Samuel">
+                        <span class="iconify" data-icon="akar-icons:github-fill"></span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -42,7 +43,7 @@
                     alt="Developer Abiodun Samuel" title="Developer Abiodun Samuel" height="350px" width="311px">
             </div>
             <div class="p-quote text-center">
-                <p>“Make it <b id="p-quote"></b>" – Kent Beck</p>
+                <p>“Make it Work, Right, Fast" – Kent Beck</p>
             </div>
         </div>
     </div>
@@ -409,7 +410,7 @@
 
 @endsection
 @push('scripts')
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
+    {{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script> --}}
     {{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js"></script> --}}
 

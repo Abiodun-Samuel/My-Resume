@@ -1,4 +1,5 @@
 const mix = require("laravel-mix");
+require("laravel-mix-purgecss");
 
 mix.js("resources/js/app.js", "public/js") //bootstrap js
     .js("resources/js/script_admin.js", "public/js") // admin custom js
@@ -10,4 +11,5 @@ mix.js("resources/js/app.js", "public/js") //bootstrap js
         processCssUrls: false,
     })
     .sourceMaps()
-    .version();
+    .version()
+    .purgeCss();

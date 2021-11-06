@@ -570,18 +570,19 @@ header .nav-link.auth-btn:hover {
     font-family: var(--merry);
     color: var(--purple-3);
     letter-spacing: 0.5px;
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin: 0 0 0.5px 0;
     text-decoration: none;
+    font-family: var(--merry);
 }
 .portfolio .card .card-text {
     color: var(--black-4);
     font-size: 0.9rem;
     display: inline-block;
-    padding: 2px 0;
+    padding: 3px 0;
     margin: 2.5px 0 2.5px 0;
     line-height: 1.3;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.5px;
     font-weight: 500;
 }
 .portfolio .card .text-stack {

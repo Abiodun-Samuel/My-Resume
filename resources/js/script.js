@@ -6,30 +6,6 @@ AOS.init({
 });
 (function ($) {
     ("use strict");
-
-    // Typejs
-    // var typejs = document.getElementById("typed");
-    // var p_quote = document.getElementById("p-quote");
-    // if (typejs) {
-    //     var typed = new Typed("#typed", {
-    //         strings: ["Developer", "Designer"],
-    //         smartBackspace: true,
-    //         typeSpeed: 60,
-    //         backSpeed: 30,
-    //         loop: true,
-    //         loopCount: Infinity,
-    //     });
-    //     var p_quote = new Typed("#p-quote", {
-    //         strings: ["Work", "Right", "Fast"],
-    //         smartBackspace: false,
-    //         typeSpeed: 60,
-    //         backSpeed: 0,
-    //         showCursor: false,
-    //         loop: true,
-    //         loopCount: Infinity,
-    //     });
-    // }
-
     //  counterUp
     const el = document.querySelectorAll(".counter");
     if (el) {
@@ -38,8 +14,8 @@ AOS.init({
             entries.forEach((entry) => {
                 const el = entry.target;
                 counterUp(el, {
-                    duration: 2000,
-                    delay: 16,
+                    duration: 500,
+                    delay: 10,
                 });
             });
         };
@@ -89,26 +65,6 @@ AOS.init({
         });
     }
 
-    // Smooth scrolling on the navbar links
-    $(".btn_one").on("click", function (event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-
-            $("html, body").animate(
-                {
-                    scrollTop: $(this.hash).offset().top,
-                },
-                1000,
-                "linear"
-            );
-
-            // if ($(this).parents(".navbar-nav").length) {
-            //     $(".navbar-nav .active").removeClass("active");
-            //     $(this).closest("a").addClass("active");
-            // }
-        }
-    });
-
     // Back to top button
     jQuery(function () {
         $(window).on("scroll", function () {
@@ -141,29 +97,29 @@ AOS.init({
     // });
 })(jQuery);
 
-(function () {
-    // make console color white
-    console._log = console.log;
-    console.log = function (log) {
-        return console._log(`%c ${log}`, "color:rgba(255,255,255,0)");
-    };
+// (function () {
+//     // make console color white
+//     console._log = console.log;
+//     console.log = function (log) {
+//         return console._log(`%c ${log}`, "color:rgba(255,255,255,0)");
+//     };
 
-    //prevent console script
-    if (!$("body").hasClass("debug_mode")) {
-        var _z = console;
-        Object.defineProperty(window, "console", {
-            get: function () {
-                if ((window && window._z && window._z._commandLineAPI) || {}) {
-                    throw "Go away motherfucker!";
-                }
-                return _z;
-            },
-            set: function (val) {
-                _z = val;
-            },
-        });
-    }
-})();
+//     //prevent console script
+//     if (!$("body").hasClass("debug_mode")) {
+//         var _z = console;
+//         Object.defineProperty(window, "console", {
+//             get: function () {
+//                 if ((window && window._z && window._z._commandLineAPI) || {}) {
+//                     throw "Go away motherfucker!";
+//                 }
+//                 return _z;
+//             },
+//             set: function (val) {
+//                 _z = val;
+//             },
+//         });
+//     }
+// })();
 
 // Navbar scroll effects
 window.onscroll = function () {

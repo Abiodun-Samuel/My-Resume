@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="hero-btn">
-                    <a class="d-inline-block btn_one" href="{{ route('project.index') }}">Portfolio</a>
+                    <a target="_blank" class="d-inline-block btn_one" href="{{ route('project.index') }}">Portfolio</a>
                     <a class="d-inline-block btn_two" href="{{ asset('images/resume/Abiodun Samuel CV.pdf') }}"
                         target="_blank" download="">Resume</a>
                 </div>

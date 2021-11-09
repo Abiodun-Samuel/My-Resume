@@ -41,11 +41,17 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 my-4 d-flex align-items-stretch">
                     <div class="project-info" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Project information</h3>
+                        <h3>Project Information</h3>
+
                         <ul>
                             <li><strong>Category</strong>: {{ $project->project_category }}</li>
                             <li><strong>Client</strong>: {{ $project->title }}</li>
-                            <li><strong>Project date</strong>: {{ $project->created_at }}</li>
+                            <li><strong>Tech Stack</strong>:
+                                @foreach (json_decode($project->tech_stack) as $tech_stack)
+                                    <span class="mr-1"> {!! tech_value($tech_stack) !!} </span>
+                                @endforeach
+                            </li>
+                            {{-- <li><strong>Project date</strong>: {{ $project->created_at }}</li> --}}
                             <li><strong>Project URL</strong>: <a target="_blank"
                                     href="{{ $project->project_link }}">{{ $project->project_link }}</a></li>
                             <li><strong>Github URL</strong>: <a target="_blank"
@@ -56,7 +62,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 my-4 d-flex align-items-stretch">
                     <div class="project-description" data-aos="fade-up" data-aos-delay="200">
-                        <h2>Project description</h2>
+                        <h3>Project Description</h2>
                         <p>
                             {{ $project->description }}
                         </p>

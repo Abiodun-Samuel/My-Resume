@@ -570,7 +570,7 @@ header .nav-link.auth-btn:hover {
     font-family: var(--merry);
     color: var(--purple-3);
     letter-spacing: 0.5px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 0 0 0.5px 0;
     text-decoration: none;
 }
@@ -635,7 +635,7 @@ header .nav-link.auth-btn:hover {
 /* Other Pages  */
 /* General  */
 .breadcrumbs {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     background: var(--purple-3);
     min-height: 40px;
     margin-top: 68px;
@@ -691,6 +691,8 @@ header .nav-link.auth-btn:hover {
 }
 /* Project / Portfolio Page  */
 /* Portfolio Project Details */
+/* {{-- same style with index projects in projects index --}} */
+/* portfolio detail section  */
 #project-details {
     position: relative;
 }
@@ -712,51 +714,54 @@ header .nav-link.auth-btn:hover {
 }
 
 #project-details .project-info {
-    /* box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); */
     padding: 1rem 0;
-    /* border-radius: 4px; */
 }
 
 #project-details .project-info h3 {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     color: var(--purple-3);
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--purple--1);
+    font-family: var(--merry);
 }
 
 #project-details .project-info ul {
     list-style: none;
     padding: 0;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
-#project-details .portfolio-info ul li + li {
-    margin-top: 10px;
+#project-details .project-info ul li strong {
+    font-family: var(--merry);
+    color: var(--purple-3);
+}
+#project-details .project-info ul li + li {
+    margin-top: 5px;
 }
 
 #project-details .project-description {
-    /* box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); */
     padding: 1rem 0;
-    /* border-radius: 4px; */
 }
 
-#project-details .project-description h2 {
-    font-size: 1.5rem;
+#project-details .project-description h3 {
+    font-size: 1.45rem;
     color: var(--purple-3);
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--purple--1);
+    font-family: var(--merry);
 }
 
 #project-details .project-description p {
     color: var(--black-4);
+    letter-spacing: 0.5px;
 }
 
 @media (max-width: 768px) {
-    #project-details .portfolio-info {
+    #project-details .project-info {
         position: static;
         margin-top: 30px;
     }

@@ -271,7 +271,7 @@
         <div class="container">
             <div class="row portfolio">
                 @foreach ($portfolio as $key => $project)
-                    <div class="col-lg-4 col-md-6 col-sm-6 my-2 d-flex align-items-stretch" data-aos="fade-up"
+                    <div class="col-lg-4 col-md-6 col-sm-6 my-4 d-flex align-items-stretch" data-aos="fade-up"
                         data-aos-delay="{{ $key * 100 }}">
                         <div class="card">
                             <div class="state">
@@ -288,11 +288,11 @@
                                         href="{{ route('project.show', $project->slug) }}">{{ $project->title }}</a>
                                 </h5>
                                 <p class="card-text">{{ $project->description }}</p>
-                                <div class="tech-stack">
+                                {{-- <div class="tech-stack">
                                     @foreach (json_decode($project->tech_stack) as $tech_stack)
                                         {!! tech_value($tech_stack) !!}
                                     @endforeach
-                                </div>
+                                </div> --}}
                                 <div class="mt-3 text-right project_btn">
                                     <a href="{{ $project->github_link }}" target="_blank">
                                         <span class="iconify" data-icon="bi:github"></span>

@@ -492,7 +492,7 @@ header .nav-link.auth-btn:hover {
     border: 1px solid var(--red-1);
 }
 
-#contact .contact-form button {
+#contact .contact-form button.contact_btn {
     position: relative;
     border: 1.5px solid var(--purple-3);
     outline: 1.5px solid var(--purple-3);
@@ -508,7 +508,7 @@ header .nav-link.auth-btn:hover {
     font-size: 1rem;
     margin-right: 5px;
 }
-#contact .contact-form button:hover {
+#contact .contact-form button.contact_btn:hover {
     text-decoration: none;
     outline: 1.5px solid var(--purple-4);
     border: 1.5px solid var(--purple-4);
@@ -566,7 +566,7 @@ header .nav-link.auth-btn:hover {
     margin: 1px 0 2px 0;
 }
 .portfolio .card .card-title a {
-    font-weight: 500;
+    font-weight: 600;
     font-family: var(--merry);
     color: var(--purple-3);
     letter-spacing: 0.5px;
@@ -692,6 +692,52 @@ header .nav-link.auth-btn:hover {
 /* Project / Portfolio Page  */
 /* Portfolio Project Details */
 /* {{-- same style with index projects in projects index --}} */
+.search_result {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.search_result h2 {
+    color: var(--black-4);
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.search_result span {
+    color: var(--purple-3);
+    font-weight: 900;
+}
+.search_result p {
+    color: var(--black-4);
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+#search_label {
+    font-size: 0.9rem;
+    color: var(--black-4);
+    letter-spacing: 0.4px;
+    font-family: var(--merry);
+    width: 100%;
+    padding: 2px 0;
+    margin: 2px 0;
+}
+#search_query {
+    border: 1px solid var(--purple-0);
+    padding: 0.2rem 0.8rem;
+    font-size: 0.85rem;
+    height: 2rem;
+    border-radius: 4px;
+    font-family: var(--merry);
+    outline: none;
+    color: var(--purple-3);
+}
+#search_query:focus {
+    border: 1px solid var(--red-1);
+}
 /* portfolio detail section  */
 #project-details {
     position: relative;

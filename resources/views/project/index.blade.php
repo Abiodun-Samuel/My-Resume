@@ -22,6 +22,28 @@
     {{-- same style with index projects --}}
     <section id="portfolio">
         <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-between">
+                    <form action="{{ route('project.search') }}" method="get">
+                        <label id="search_label" for="query">Search by Category</label>
+                        <select name="query" id="search_query" onchange="this.form.submit()">
+                            <option value="">Category</option>
+                            <option value="NodeJs">NodeJs</option>
+                            <option value="Javascript">JavaScript</option>
+                            <option value="PHP">PHP</option>
+                            <option value="Laravel">Laravel</option>
+                            <option value="React">React</option>
+                            <option value="CodeIgniter">CodeIgniter</option>
+                        </select>
+                    </form>
+                    <form action="{{ route('project.search') }}" method="get">
+                        <label id="search_label" for="query">Search by Keyword</label>
+                        <input type="text" name="query" id="search_query" onchange="this.form.submit()"
+                            placeholder="Keyword">
+                    </form>
+                </div>
+            </div>
+
             <div class="row portfolio">
                 @foreach ($projects as $key => $project)
                     <div class="col-lg-4 col-md-6 col-sm-6 my-4 d-flex align-items-stretch" data-aos="fade-up"

@@ -261,7 +261,7 @@
                     list. Interested to see more? Visit my porfolio page.
                 </p>
                 <div class="header-link text-center">
-                    <a href="{{ route('project.index') }}">Portfolio</a>
+                    <a target="_blank" href="{{ route('project.index') }}">Portfolio</a>
                 </div>
             </div>
         </div>
@@ -284,7 +284,7 @@
                                 class="img-fluid profile-img bg-secondary" alt="{{ $project->title }}"
                                 title="{{ $project->title }}" height="226px" width="auto">
                             <div class="card-body">
-                                <h5 class="card-title"><a
+                                <h5 class="card-title"><a target="_blank"
                                         href="{{ route('project.show', $project->slug) }}">{{ $project->title }}</a>
                                 </h5>
                                 <p class="card-text">{{ $project->description }}</p>
@@ -398,7 +398,7 @@
                         </div>
                         <div class="form-row my-3">
                             <div class="col-lg-12 text-right">
-                                <button class="shadow-sm" type="submit">Send Message</button>
+                                <button class="shadow-sm contact_btn" type="submit">Send Message</button>
                             </div>
                         </div>
                     </form>

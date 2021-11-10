@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -18,6 +19,19 @@ class ProjectPageController extends Controller
         return view('project.index', compact('projects'));
     }
 
+    public function search(Request $request)
+    {
+        $request->validate([
+            'query' => 'required|string',
+        ]);
+        $query = $request->input('query');
+        $query = clean_string($query);
+
+        $projects = Project::where('tech_stack', 'like',  '%' . $query . '%')->orwhere('project_category', 'like', '%' . $query . '%')->get();
+        $subTitle = $query;
+        return view('project.search', compact('projects', "subTitle"));
+    }
+    // ->or
     /**
      * Show the form for creating a new resource.
      *

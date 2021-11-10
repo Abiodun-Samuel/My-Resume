@@ -21,7 +21,9 @@ Route::post("/send_message", [ContactController::class, 'store'])->name('send_me
 
 //Project Page Controller
 Route::get('/projects', [ProjectPageController::class, 'index'])->name('project.index');
+Route::get('/projects/search', [ProjectPageController::class, 'search'])->name('project.search');
 Route::get('/projects/{project:slug}', [ProjectPageController::class, 'show'])->name('project.show');
+
 
 
 Route::get('/blog', [BlogPageController::class, 'index'])->name('blog.home');

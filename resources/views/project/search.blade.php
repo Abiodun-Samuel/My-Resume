@@ -62,7 +62,7 @@
                                     class="img-fluid profile-img bg-secondary" alt="{{ $project->title }}"
                                     title="{{ $project->title }}" height="226px" width="auto">
                                 <div class="card-body">
-                                    <h5 class="card-title"><a
+                                    <h5 class="card-title"><a target="_blank"
                                             href="{{ route('project.show', $project->slug) }}">{{ $project->title }}</a>
                                     </h5>
                                     <p class="card-text">{{ $project->description }}</p>

@@ -105,15 +105,17 @@
     </a>
 
     <div id="preloader">
-        <div id="centerdiv">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <div class="col-lg-6">
+            <div id="centerdiv">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
         </div>
     </div>
 

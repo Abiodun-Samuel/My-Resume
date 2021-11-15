@@ -18,7 +18,7 @@ AOS.init({
         mainStatus.fadeOut();
         mainPreloader.delay(350).fadeOut("slow");
         mainBody.delay(350).css({
-            overflow: "visible",
+            overflow: "hidden",
         });
 
         // Scroll to Top

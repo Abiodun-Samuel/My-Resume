@@ -95,7 +95,7 @@
     <!-- Footer Start -->
 
     <!-- Back to Top -->
-    <a class="back-to-top" title="Back to top">
+    <a href="#" class="scrollup back-to-top">
         <svg width="2.3em" height="2.3em" viewBox="0 0 16 16">
             <g fill="#f37e21">
                 <path fill-rule="evenodd"
@@ -104,8 +104,18 @@
         </svg>
     </a>
 
-    {{-- <a href="" class="back-to-top"> <img class="img-fluid" src="{{ asset('images/icons/up.svg') }}"
-            alt="Go Up"></a> --}}
+    <div id="preloader">
+        <div id="centerdiv">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -6,6 +6,46 @@ AOS.init({
 });
 (function ($) {
     ("use strict");
+    var mainWindow = $(window),
+        mainHeader = $("header"),
+        mainBody = $("body"),
+        scrollUp = $(".scrollup"),
+        mainPreloader = $("#preloader"),
+        mainStatus = $("#centerdiv");
+
+    mainWindow.on("load", function () {
+        // Preloader
+        mainStatus.fadeOut();
+        mainPreloader.delay(350).fadeOut("slow");
+        mainBody.delay(350).css({
+            overflow: "visible",
+        });
+
+        // Scroll to Top
+        mainWindow.on("scroll", function () {
+            if ($(this).scrollTop() > 98) {
+                mainHeader.addClass("sticky");
+                mainBody.addClass("sticky");
+                scrollUp.show();
+            } else {
+                mainHeader.removeClass("sticky");
+                mainBody.removeClass("sticky");
+                scrollUp.hide();
+            }
+        });
+
+        // Click event to scroll to top
+        scrollUp.on("click", function () {
+            $("html, body").animate(
+                {
+                    scrollTop: 0,
+                },
+                800
+            );
+            return false;
+        });
+    });
+
     //  counterUp
     const el = document.querySelectorAll(".counter");
     if (el) {
@@ -64,37 +104,6 @@ AOS.init({
             closeColor: "#d58943",
         });
     }
-
-    // Back to top button
-    jQuery(function () {
-        $(window).on("scroll", function () {
-            if ($(this).scrollTop() > 100) {
-                $(".back-to-top").fadeIn("slow");
-            } else {
-                $(".back-to-top").fadeOut("slow");
-            }
-        });
-        $(".back-to-top").on("click", function () {
-            $("html, body").animate(
-                {
-                    scrollTop: 0,
-                },
-                500
-            );
-            return false;
-        });
-    });
-    // $(window).on("scroll", function () {
-    //     if ($(this).scrollTop() > 100) {
-    //         $(".back-to-top").fadeIn("slow");
-    //     } else {
-    //         $(".back-to-top").fadeOut("slow");
-    //     }
-    // });
-    // $(".back-to-top").on("click", function () {
-    //     $("html, body").animate({ scrollTop: 0 }, 1000, "linear");
-    //     return false;
-    // });
 })(jQuery);
 
 // (function () {

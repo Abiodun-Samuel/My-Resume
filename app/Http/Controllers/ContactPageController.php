@@ -8,6 +8,7 @@ class ContactPageController extends Controller
 {
     public function index()
     {
-        return view('contact');
+        $innerTitle = "Contact";
+        return view('contact', compact('innerTitle'));
     }
 }

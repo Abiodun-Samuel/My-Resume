@@ -106,29 +106,29 @@ AOS.init({
     }
 })(jQuery);
 
-// (function () {
-//     // make console color white
-//     console._log = console.log;
-//     console.log = function (log) {
-//         return console._log(`%c ${log}`, "color:rgba(255,255,255,0)");
-//     };
+(function () {
+    // make console color white
+    console._log = console.log;
+    console.log = function (log) {
+        return console._log(`%c ${log}`, "color:rgba(255,255,255,0)");
+    };
 
-//     //prevent console script
-//     if (!$("body").hasClass("debug_mode")) {
-//         var _z = console;
-//         Object.defineProperty(window, "console", {
-//             get: function () {
-//                 if ((window && window._z && window._z._commandLineAPI) || {}) {
-//                     throw "Go away motherfucker!";
-//                 }
-//                 return _z;
-//             },
-//             set: function (val) {
-//                 _z = val;
-//             },
-//         });
-//     }
-// })();
+    //prevent console script
+    if (!$("body").hasClass("debug_mode")) {
+        var _z = console;
+        Object.defineProperty(window, "console", {
+            get: function () {
+                if ((window && window._z && window._z._commandLineAPI) || {}) {
+                    throw "Go away motherfucker!";
+                }
+                return _z;
+            },
+            set: function (val) {
+                _z = val;
+            },
+        });
+    }
+})();
 
 // Navbar scroll effects
 window.onscroll = function () {

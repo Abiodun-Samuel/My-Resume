@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h2>Projects</h2>
+                        <h2>Project Page</h2>
                         <ol>
                             <li><a href="{{ route('home') }}">Home</a></li>
                             {{-- <li><a href="{{ route('project.index') }}">Projects</a></li> --}}

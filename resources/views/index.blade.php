@@ -121,7 +121,7 @@
                     I'm a Performance-driven and Self-motivated Developer with extensive experience designing,
                     developing,
                     and
-                    deploying web applications with strong attention to details and passion for learning new things.
+                    deploying web applications with strong attention to details and passion for learning new technologies.
                 </p>
                 <p class="span">Abiodun Samuel O.</p>
             </div>
@@ -132,7 +132,8 @@
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-7">
-                    <h4> I'm a Versatile Web Developer with vast knowledge and proficiency in array of Front-End,
+                    <h4> I'm a Versatile Web Developer with vast knowledge and proficiency in array of
+                        Front-End,
                         Back-End Languages, Frameworks and Technologies like;
                     </h4>
                     <hr>

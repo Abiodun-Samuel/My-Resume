@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Blog;
 use App\Models\Project;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -45,5 +46,9 @@ class User extends Authenticatable
     public function project()
     {
         return $this->hasMany(Project::class);
+    }
+    public function blog()
+    {
+        return $this->hasMany(Blog::class);
     }
 }

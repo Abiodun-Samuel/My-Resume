@@ -32,6 +32,7 @@
     <!-- Bootstrap $ custom Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="{{ mix('css/style.css') }}">
+    <input type="hidden" value="{{ url('/') }}" id="base_url" name="base_url">
 </head>
 
 <body>

@@ -26,7 +26,12 @@ Route::get('/projects/{project:slug}', [ProjectPageController::class, 'show'])->
 
 
 // pages routes 
+
+// blog 
 Route::get('/blog', [BlogPageController::class, 'index'])->name('blog.home');
+Route::get('/blog/{blog:slug}', [BlogPageController::class, 'show'])->name('blog.show');
+
+
 Route::get('/contact', [ContactPageController::class, 'index'])->name('contact')->middleware('auth');
 
 // Admin Routes

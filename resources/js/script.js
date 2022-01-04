@@ -65,6 +65,31 @@ AOS.init({
         });
     }
 
+    $(".like").on("click", () => {
+        console.log("clicked");
+    });
+
+    var base_url = $("#base_url").val();
+
+    // let message = $("#message").val();
+    // let email = $("#email").val();
+    // let name = $("#name").val();
+    // let subject = $("#subject").val();
+
+    $.ajax({
+        url: `${base_url}/blog/blog_api`,
+        type: "GET",
+        success: function (response) {
+            console.log(response[0]["likes"]);
+            // $(".test").html(response[0]["likes"]);
+        },
+        error: function (err) {
+            console.log(err);
+            // var note = "<p>" + response.responseJSON.errors.subject[0] + "</p>";
+            // $("#errors").html(note);
+        },
+    });
+
     // load gsap
     // var anim_img = document.querySelector(".anim_img");
     // if (anim_img) {
@@ -106,29 +131,29 @@ AOS.init({
     }
 })(jQuery);
 
-(function () {
-    // make console color white
-    console._log = console.log;
-    console.log = function (log) {
-        return console._log(`%c ${log}`, "color:rgba(255,255,255,0)");
-    };
+// (function () {
+//     // make console color white
+//     console._log = console.log;
+//     console.log = function (log) {
+//         return console._log(`%c ${log}`, "color:rgba(255,255,255,0)");
+//     };
 
-    //prevent console script
-    if (!$("body").hasClass("debug_mode")) {
-        var _z = console;
-        Object.defineProperty(window, "console", {
-            get: function () {
-                if ((window && window._z && window._z._commandLineAPI) || {}) {
-                    throw "Go away motherfucker!";
-                }
-                return _z;
-            },
-            set: function (val) {
-                _z = val;
-            },
-        });
-    }
-})();
+//     //prevent console script
+//     if (!$("body").hasClass("debug_mode")) {
+//         var _z = console;
+//         Object.defineProperty(window, "console", {
+//             get: function () {
+//                 if ((window && window._z && window._z._commandLineAPI) || {}) {
+//                     throw "Go away motherfucker!";
+//                 }
+//                 return _z;
+//             },
+//             set: function (val) {
+//                 _z = val;
+//             },
+//         });
+//     }
+// })();
 
 // Navbar scroll effects
 window.onscroll = function () {

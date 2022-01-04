@@ -707,7 +707,7 @@ header .nav-link.auth-btn:hover {
 }
 
 .breadcrumbs h2 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: var(--light-0);
     font-family: var(--merry);
@@ -750,10 +750,7 @@ header .nav-link.auth-btn:hover {
         display: inline-block;
     }
 }
-/* Blog Page  */
-#blog_page {
-    padding: 5rem 0;
-}
+
 /* Project / Portfolio Page  */
 /* Portfolio Project Details */
 /* {{-- same style with index projects in projects index --}} */
@@ -941,4 +938,66 @@ header .nav-link.auth-btn:hover {
 }
 .auth .auth-card button:hover {
     transform: scale(0.98);
+}
+
+/* Blog Page  */
+.blog_details {
+    position: relative;
+}
+.blog_details .blog_title {
+    color: var(--purple-3);
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.blog_details .blog_time span {
+    color: #a5a5a5;
+    font-size: 0.85rem;
+}
+.blog_details .blog_body {
+    color: var(--black-5);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.blog_details .blog_slug a {
+    background-color: var(--red-1);
+    color: #fff;
+    font-size: 0.95rem;
+    padding: 0.35rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 500ms;
+}
+.blog_details .blog_slug a:hover {
+    background-color: var(--red);
+}
+.blog_details .like,
+.blog_details .dislike,
+.blog_details .comments,
+.blog_details .blog_notifications {
+    position: relative;
+}
+.blog_details .blog_notifications .iconify {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #eee;
+    padding: 3px;
+}
+.blog_details .like_count,
+.blog_details .dislike_count,
+.blog_details .comments_count {
+    position: absolute;
+    top: -7px;
+    left: 13px;
+    background-color: var(--red);
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 4.5px;
+    font-size: 0.6rem;
+    height: 17px;
+    width: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+// use Illuminate\Support\Facades\DB;
 
 class BlogPageController extends Controller
 {
@@ -13,7 +17,9 @@ class BlogPageController extends Controller
      */
     public function index()
     {
-        return view('blog.index');
+        // $blogs = DB::table('blogs')->get();
+        $blogs = Blog::with('user')->get();
+        return view('blog.index', compact('blogs'));
     }
 
     /**
@@ -40,12 +46,13 @@ class BlogPageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $blog = Blog::where('slug', $slug)->first();
+        return view('blog.show', compact('blog'));
     }
 
     /**

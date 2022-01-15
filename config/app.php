@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://www.abiodundigitalhub.tech'),
+    'url' => env('APP_URL', 'https://www.abiodunsamuel.com'),
 
     'asset_url' => env('ASSET_URL', null),
 

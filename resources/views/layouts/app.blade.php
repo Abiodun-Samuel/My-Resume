@@ -10,7 +10,7 @@
     <meta name="keywords"
         content="web de, webdesign, website company, web page design, build a website, web application development, website, website builder, web developer, ecommerce website, create a website business, Website Design, Development, Responsive Websites, Content Management, online business" />
     <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://www.abiodundigitalhub.com" />
+    <link rel="canonical" href="https://www.abiodunsamuel.com" />
 
     {{-- Facebook Tags --}}
     <meta property="og:title" content="Abiodun Samuel Oluyemi | Resume">
@@ -29,6 +29,7 @@
     <!-- CSS Libraries -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Bootstrap $ custom Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="{{ mix('css/style.css') }}">
@@ -60,7 +61,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link active" href="{{ route('home') }}">Home</a>
-                        <a class="nav-link" href="{{ route('project.index') }}">Portfolio</a>
+                        <a class="nav-link" href="{{ route('project.index') }}">Projects</a>
                         <a class="nav-link" href="{{ route('blog.home') }}">Blog</a>
                         <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                         @auth
@@ -85,8 +86,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p class="m-0 p-0">&copy; Copyright 2021. All Rights Reserved.</p>
-                    <p class="m-0 p-0">Designed & Developed by <a href="https://abiodundigitalhub.tech">Abiodun
+                    <p class="m-0 p-0">&copy; Copyright <span id="get-year"></span>. All Rights Reserved.</p>
+                    <p class="m-0 p-0">Designed & Developed by <a href="https://abiodunsamuel.com">Abiodun
                             Digital Hub</a>
                     <p>
                 </div>
@@ -126,12 +127,17 @@
     <script src="{{ mix('js/app.js') }}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"> </script>
-    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    {{-- <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script> --}}
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.js"></script>
 
     @stack('scripts')
     <!-- Custom Javascript -->
     <script src="{{ mix('js/script.js') }}"></script>
+
+    </script>
+
+
 </body>
 
 </html>

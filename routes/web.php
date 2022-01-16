@@ -24,7 +24,6 @@ Route::get('/projects', [ProjectPageController::class, 'index'])->name('project.
 Route::get('/projects/search', [ProjectPageController::class, 'search'])->name('project.search');
 Route::get('/projects/{project:slug}', [ProjectPageController::class, 'show'])->name('project.show');
 
-
 // pages routes 
 
 // blog 

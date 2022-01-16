@@ -6,6 +6,11 @@ AOS.init({
 });
 (function ($) {
     ("use strict");
+
+    // display year at footer
+    var get_year = document.getElementById("get-year");
+    get_year.innerHTML = new Date().getFullYear();
+
     var mainWindow = $(window),
         mainHeader = $("header"),
         mainBody = $("body"),
@@ -65,6 +70,37 @@ AOS.init({
         });
     }
 
+    $(".about-skill").slick({
+        slidesToShow: 8,
+        slidesToScroll: 2,
+        arrows: false,
+        dots: false,
+        centerMode: true,
+        autoplay: true,
+        centerPadding: "10px",
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        autoplaySpeed: 1000,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 2,
+                    centerPadding: "10px",
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 4.5,
+                    slidesToScroll: 1,
+                    centerPadding: "10px",
+                },
+            },
+        ],
+    });
+
     $(".like").on("click", () => {
         console.log("clicked");
     });
@@ -76,19 +112,19 @@ AOS.init({
     // let name = $("#name").val();
     // let subject = $("#subject").val();
 
-    $.ajax({
-        url: `${base_url}/blog/blog_api`,
-        type: "GET",
-        success: function (response) {
-            console.log(response[0]["likes"]);
-            // $(".test").html(response[0]["likes"]);
-        },
-        error: function (err) {
-            console.log(err);
-            // var note = "<p>" + response.responseJSON.errors.subject[0] + "</p>";
-            // $("#errors").html(note);
-        },
-    });
+    // $.ajax({
+    //     url: `${base_url}/blog/blog_api`,
+    //     type: "GET",
+    //     success: function (response) {
+    //         // console.log(response[0]["likes"]);
+    //         // $(".test").html(response[0]["likes"]);
+    //     },
+    //     error: function (err) {
+    //         // console.log(err);
+    //         // var note = "<p>" + response.responseJSON.errors.subject[0] + "</p>";
+    //         // $("#errors").html(note);
+    //     },
+    // });
 
     // load gsap
     // var anim_img = document.querySelector(".anim_img");

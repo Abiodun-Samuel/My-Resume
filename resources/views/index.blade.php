@@ -2,51 +2,38 @@
 
 @section('content')
     {{-- hero section --}}
-    <div id="hero" class="row">
-        <div class="col-lg-5 col-md-6 hero-text-box">
-            <div class="hero">
-                <div class="hero-text">
-                    <p id="hi">Hi There 👋,</p>
-                    <h1> I'm <span id="hero_name">Samuel</span>, <br> Web <b id="typed"> Developer</b>
-                    </h1>
-                    <p>i-Design, i-Develop Innovative Web Solutions for Individuals, Organizations and Companies.
-                    </p>
-                </div>
+    <div id="hero">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-6">
+                    <div class="hero-text mt-1 mb-5">
+                        <p class="hello">Hi There 👋,</p>
+                        <h1> I'm <span>Samuel</span></h1>
+                        <h2>Full Stack Web Developer.</h2>
+                        <p>i-Design, i-Develop Innovative Web Solutions for Individuals, Organizations and Companies.
+                        </p>
+                    </div>
 
-                <div class="hero-btn">
-                    <a target="_blank" class="d-inline-block btn_one" href="{{ route('project.index') }}">Portfolio</a>
-                    <a class="d-inline-block btn_two" href="{{ asset('images/resume/Abiodun Samuel CV.pdf') }}"
-                        target="_blank" download="">Resume</a>
-                </div>
+                    <div class="hero-btn my-4">
+                        <a target="_blank" href="{{ route('project.index') }}">Projects</a>
+                    </div>
 
-                <div class="hero-icons anim">
-                    <a href="https://web.facebook.com/psalmzie007">
-                        <span class="iconify" data-icon="entypo-social:facebook"></span></a>
-                    <a href="https://wa.link/aqutc1">
-                        <span class="iconify" data-icon="akar-icons:whatsapp-fill"></span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/samuel-abiodun-9b9a64168/">
-                        <span class="iconify" data-icon="akar-icons:linkedin-fill"></span>
-                    </a>
-                    <a href="https://www.instagram.com/4pointerz/">
-                        <span class="iconify" data-icon="akar-icons:instagram-fill"></span>
-                    </a>
-                    <a href="https://github.com/Abiodun-Samuel">
-                        <span class="iconify" data-icon="akar-icons:github-fill"></span>
-                    </a>
+                    <div class="thim-click-to-bottom mt-5 d-flex justify-content-center align-items-center">
+                        <a href="#about" class="scroll d-flex justify-content-center align-items-center">
+                            <img loading="lazy" class='no-img' src="{{ asset('images/icons/down-arrow.png') }}" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    {{-- <div id="hero" class="row">
         <div class="col-lg-7 col-md-6 hero-img-box">
-            <div class="img-cont d-flex justify-content-center">
-                <img loading="lazy" class="img-fluid" src="{{ asset('images/profile.jpg') }}"
-                    alt="Developer Abiodun Samuel" title="Developer Abiodun Samuel" height="350px" width="311px">
-            </div>
             <div class="p-quote text-center">
                 <p>“Make it Work, Right, Fast" – Kent Beck</p>
             </div>
         </div>
-    </div>
+    </div> --}}
     {{-- hero section --}}
 
     {{-- Counts Section --}}
@@ -55,7 +42,7 @@
             <div class="row d-flex align-items-stretch">
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
-                        <span class="iconify" data-width="32" data-height="32" data-icon="logos:javascript"></span>
+                        <img loading="lazy" src="{{ asset('images/icons/javascript.svg') }}" alt="javascript icon">
                         <div class="counter">
                             {{ $projects->where('project_category', 'Javascript')->count() }}
                         </div>
@@ -64,7 +51,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
-                        <span class="iconify" data-width="32" data-height="32" data-icon="logos:react"></span>
+                        <img loading="lazy" src="{{ asset('images/icons/react.svg') }}" alt="react icon">
                         <div class="counter">
                             {{ $projects->where('project_category', 'React')->count() }}
                         </div>
@@ -73,7 +60,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
-                        <span class="iconify" data-width="40" data-height="32" data-icon="logos:nodejs"></span>
+                        <img loading="lazy" src="{{ asset('images/icons/nodejs.svg') }}" alt="nodejs icon">
                         <div class="counter">
                             {{ $projects->where('project_category', 'NodeJs')->count() }}
                         </div>
@@ -82,7 +69,7 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
-                        <span class="iconify" data-width="32" data-height="32" data-icon="logos:php"></span>
+                        <img loading="lazy" src="{{ asset('images/icons/php.svg') }}" alt="php icon">
                         <div class="counter">
                             {{ $projects->where('project_category', 'PHP')->count() }}
                         </div>
@@ -91,7 +78,8 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
-                        <span class="iconify" data-width="32" data-height="32" data-icon="logos:laravel"></span>
+                        <img loading="lazy" src="{{ asset('images/icons/laravel.svg') }}" alt="laravel icon">
+
                         <div class="counter">
                             {{ $projects->where('project_category', 'Laravel')->count() }}
                         </div>
@@ -100,7 +88,8 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
-                        <span class="iconify" data-width="32" data-height="32" data-icon="logos:codeigniter"></span>
+                        <img loading="lazy" src="{{ asset('images/icons/codeigniter.svg') }}" alt="codeigniter icon">
+
                         <div class="counter">
                             {{ $projects->where('project_category', 'CodeIgniter')->count() }}
                         </div>
@@ -118,132 +107,96 @@
             <div class="col-lg-8">
                 <h2 class="text-center">About Me</h2>
                 <p>
-                    I'm a Performance-driven and Self-motivated Developer with extensive experience designing,
+                    I'm a performance-driven and self-motivated developer with extensive experience designing,
                     developing,
                     and
-                    deploying web applications with strong attention to details and passion for learning new technologies.
+                    deploying web applications with strong attention to details and an innate passion for learning new
+                    technologies.
                 </p>
-                <p class="span">Abiodun Samuel O.</p>
             </div>
         </div>
     </div>
 
     <section id="about">
         <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-7">
-                    <h4> I'm a Versatile Web Developer with vast knowledge and proficiency in array of
-                        Front-End,
-                        Back-End Languages, Frameworks and Technologies like;
-                    </h4>
-                    <hr>
-                    {{-- front end --}}
-                    <div class="skill-container">
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="cib:adobe-photoshop"></span>
-                            <p>Photoshop</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="ci:adobe-xd"></span>
-                            <p>Adobe Xd</p>
-                        </div>
-                        {{-- <div class="skill-box">
-                                <span class="iconify" data-icon="bx:bxl-figma"></span>
-                                <p>Figma</p>
-                            </div> --}}
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="cib:html5"></span>
-                            <p>HTML5</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="cib:css3"></span>
-                            <p>CSS3</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="akar-icons:bootstrap-fill"></span>
-                            <p>Bootstrap</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="file-icons:tailwind"></span>
-                            <p>Tailwind</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="cib:javascript"></span>
-                            <p>JavaScript</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="akar-icons:jquery-fill"></span>
-                            <p>JQuery</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="teenyicons:react-outline"></span>
-                            <p>React</p>
-                        </div>
+            <div class="row">
+                <div class="col-lg-5 my-2 d-flex justify-content-center">
+
+                    <div class="about-icons pt-4">
+                        <a href="https://web.facebook.com/psalmzie007">
+                            <img class="no-img" loading="lazy" src="{{ asset('images/icons/facebook.svg') }}"
+                                alt="facebook">
+                        </a>
+                        <a href="https://wa.link/aqutc1">
+                            <img class="no-img" loading="lazy" src="{{ asset('images/icons/whatsapp.svg') }}"
+                                alt="whatsapp">
+                        </a>
+                        <a href="https://www.linkedin.com/in/samuel-abiodun-9b9a64168/">
+                            <img class="no-img" loading="lazy" src="{{ asset('images/icons/linkedin.svg') }}"
+                                alt="linkedin">
+                        </a>
+
+                        {{-- <a href="https://www.instagram.com/4pointerz/">
+                                <img loading="lazy" src="{{ asset('images/icons/linkedin.svg') }}" alt="facebook">
+                            </a> --}}
+                        <a href="https://github.com/Abiodun-Samuel">
+                            <img class="no-img" loading="lazy" src="{{ asset('images/icons/github.svg') }}"
+                                alt="facebook">
+                        </a>
+
+                        <a title="Download Resume" href="{{ asset('images/resume/Abiodun Samuel CV.pdf') }}"
+                            target="_blank" download>
+                            <img class="no-img resume" loading="lazy"
+                                src="{{ asset('images/icons/download-file.svg') }}" alt="download resume">
+                        </a>
                     </div>
-                    <hr>
-                    {{-- backends --}}
-                    <div class="skill-container">
-                        {{-- backend --}}
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="akar-icons:php-fill"></span>
-                            <p>PHP</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="simple-icons:laravel"></span>
-                            <p>Laravel</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="whh:codeigniter"></span>
-                            <p>CodeIgniter</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="fontisto:nodejs"></span>
-                            <p>NodeJs</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="cib:mysql"></span>
-                            <p>MySQL</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="cib:mongodb"></span>
-                            <p>MongoDB</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="bi:github"></span>
-                            <p>Git/GitHub</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="simple-icons:packagist"></span>
-                            <p>Packagists</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="cib:npm"></span>
-                            <p>NPM</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="eos-icons:api-outlined"></span>
-                            <p>API</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="carbon:http"></span>
-                            <p>HTTP</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="ic:round-cached"></span>
-                            <p>Cache</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="healthicons:health-data-security-outline"></span>
-                            <p>Security</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="clarity:rack-server-solid-badged"></span>
-                            <p>Server</p>
-                        </div>
-                        <div class="skill-box">
-                            <span class="iconify" data-icon="mdi:ab-testing"></span>
-                            <p>Testing</p>
-                        </div>
+
+                    <div class="about-img">
+                        <img loading="lazy" class="img-fluid" src="{{ asset('images/profile.jpg') }}"
+                            alt="Developer Abiodun Samuel" title="Developer Abiodun Samuel" width="311px" height="350px">
+                    </div>
+                </div>
+                <div class="col-lg-7 my-2">
+                    <div class="about-text">
+                        <h4>My Work Ethics</h4>
+                        <ul>
+                            <li>
+                                I write high quality, well-documented, Front-end/Back-end codes with an emphasis on
+                                efficiency, ease of maintenance
+                                and compatibility, engaging the best coding practices.
+                            </li>
+                            <li>
+                                I'm quite familiar with GitHub, and Git flow methodology also with
+                                in-depth understanding of the entire web development processes (requirements, design,
+                                development, QA, deployment, testing, and maintenance).
+                            </li>
+                            <li> I'm adept at translating user and business needs into functional frontend design and highly
+                                scalable backend systems using JavaScript (ReactJS), NodeJs, PHP, HTML, CSS and other
+                                relevent technologies. </li>
+                        </ul>
+                    </div>
+
+                    <div class="about-skill">
+                        <img loading="lazy" src="{{ asset('images/icons/javascript.svg') }}" alt="javascript icon">
+                        <img loading="lazy" src="{{ asset('images/icons/react.svg') }}" alt="react icon">
+                        <img loading="lazy" src="{{ asset('images/icons/php.svg') }}" alt="php icon">
+                        <img loading="lazy" src="{{ asset('images/icons/nodejs.svg') }}" alt="nodejs icon">
+                        <img loading="lazy" src="{{ asset('images/icons/codeigniter.svg') }}" alt="codeigniter icon">
+                        <img loading="lazy" src="{{ asset('images/icons/laravel.svg') }}" alt="laravel icon">
+                        <img loading="lazy" src="{{ asset('images/icons/postgresql.svg') }}" alt="postgresql icon">
+                        <img loading="lazy" src="{{ asset('images/icons/laptop.svg') }}" alt="laptop icon">
+                        <img loading="lazy" src="{{ asset('images/icons/mongodb.svg') }}" alt="mongodb icon">
+                        <img loading="lazy" src="{{ asset('images/icons/mysql.svg') }}" alt="mysql icon">
+                        <img loading="lazy" src="{{ asset('images/icons/cloud-api.svg') }}" alt="cloud-api icon">
+                        <img loading="lazy" src="{{ asset('images/icons/npm.svg') }}" alt="npm icon">
+                        <img loading="lazy" src="{{ asset('images/icons/css3.svg') }}" alt="css3 icon">
+                        <img loading="lazy" src="{{ asset('images/icons/html5.svg') }}" alt="html5 icon">
+                        <img loading="lazy" src="{{ asset('images/icons/bootstrap.svg') }}" alt="bootstrap icon">
+                        <img loading="lazy" src="{{ asset('images/icons/jquery.svg') }}" alt="jquery icon">
+                        <img loading="lazy" src="{{ asset('images/icons/server.svg') }}" alt="server icon">
+                        <img loading="lazy" src="{{ asset('images/icons/security.svg') }}" alt="security icon">
+                        <img loading="lazy" src="{{ asset('images/icons/responsive.svg') }}" alt="responsive icon">
+                        <img loading="lazy" src="{{ asset('images/icons/firebase.svg') }}" alt="firebase icon">
                     </div>
                 </div>
             </div>

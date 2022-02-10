@@ -35,8 +35,8 @@
                             <div class="contact-icons shadow-sm text-center p-3">
                                 <img loading="lazy" class="no-img img-fluid" src="{{ asset('images/icons/email.svg') }}"
                                     alt="facebook icon"> <br>
-                                <a href="mailto:contact@abiodundigitalhub.tech">
-                                    <span>contact@abiodundigitalhub.tech</span> </a>
+                                <a href="mailto:contact@abiodunsamuel.com">
+                                    <span>contact@abiodunsamuel.com</span> </a>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
 
                         <div class="form-group">
                             {!! RecaptchaV3::initJs() !!}
-                            {!! RecaptchaV3::field('contact-us') !!}
+                            {!! RecaptchaV3::field('contactus') !!}
                             {{-- @error('g-recaptcha-response')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                             @enderror --}}

@@ -16,6 +16,7 @@ class ContactController extends Controller
             'email' => "required|email:rfc,dns,filter",
             'subject' => "required|string|max:255",
             'message' => "required|string|max:255",
+            'g-recaptcha-response' => 'required|recaptchav3:contact-us'
         ]);
         Mail::to('contact@abiodunsamuel.com')->send(new ContactMail($mail));
         return back()->with('status', "Your messages has been sent successfully");

@@ -67,7 +67,7 @@
                         <div class="form-row my-3">
                             <div class="col-lg-6 col-md-6 col-sm-6 xs">
                                 <input class="w-100 shadow-sm" value="{{ old('name') }}" type="text" name="name"
-                                    placeholder="Name" id="name" maxlength="3">
+                                    placeholder="Name" id="name" minlength="3">
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 xs">
                                 <input class="w-100 shadow-sm" type="email" value="{{ old('name') }}" id="email"
@@ -81,7 +81,7 @@
                             </div> --}}
                             <div class="col-lg-12">
                                 <input class="w-100 shadow-sm" type="text" name="subject" placeholder="Subject" id="subject"
-                                    value="{{ old('subject') }}" maxlength="3">
+                                    value="{{ old('subject') }}" minlength="3">
                             </div>
                         </div>
                         <div class="form-row my-3">
@@ -90,6 +90,15 @@
                                     rows="5"> {{ old('message') }} </textarea>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            {!! RecaptchaV3::initJs() !!}
+                            {!! RecaptchaV3::field('contact-us') !!}
+                            {{-- @error('g-recaptcha-response')
+                                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                            @enderror --}}
+                        </div>
+
                         <div class="form-row my-3">
                             <div class="col-lg-12 text-right">
                                 <button class="shadow-sm contact_btn" type="submit">Send Message</button>

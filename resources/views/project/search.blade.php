@@ -32,6 +32,7 @@
                                 <option value="">Category</option>
                                 <option value="NodeJs">NodeJs</option>
                                 <option value="Javascript">JavaScript</option>
+                                <option value="MERN">M.E.R.N</option>
                                 <option value="PHP">PHP</option>
                                 <option value="Laravel">Laravel</option>
                                 <option value="React">React</option>

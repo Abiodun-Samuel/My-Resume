@@ -321,6 +321,7 @@ header .nav-link.auth-btn:hover {
     background-size: cover;
     background-position: center center;
     padding: 10rem 0 2rem 0;
+    background-attachment: fixed;
 }
 
 #hero .hero-text .hello {

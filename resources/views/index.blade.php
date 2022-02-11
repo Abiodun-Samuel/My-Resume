@@ -69,13 +69,25 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
+                        <img loading="lazy" src="{{ asset('images/icons/mongodb.svg') }}" alt="nodejs icon">
+                        <img loading="lazy" src="{{ asset('images/icons/expressjs.svg') }}" alt="nodejs icon">
+                        <img loading="lazy" src="{{ asset('images/icons/react.svg') }}" alt="nodejs icon">
+                        <img loading="lazy" src="{{ asset('images/icons/nodejs.svg') }}" alt="nodejs icon">
+                        <div class="counter">
+                            {{ $projects->where('project_category', 'MERN')->count() }}
+                        </div>
+                        <p>M.E.R.N</p>
+                    </div>
+                </div>
+                {{-- <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
+                    <div class="counters">
                         <img loading="lazy" src="{{ asset('images/icons/php.svg') }}" alt="php icon">
                         <div class="counter">
                             {{ $projects->where('project_category', 'PHP')->count() }}
                         </div>
                         <p>PHP</p>
                     </div>
-                </div>
+                </div> --}}
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
                         <img loading="lazy" src="{{ asset('images/icons/laravel.svg') }}" alt="laravel icon">

@@ -10,7 +10,7 @@
                         <p class="hello">Hi There 👋,</p>
                         <h1> I'm <span>Samuel</span></h1>
                         <h2>Full Stack Web Developer.</h2>
-                        <p>i-Design, i-Develop Innovative Web Solutions for Individuals, Organizations and Companies.
+                        <p class="description">i-Design, i-Develop Innovative Web Solutions for Individuals, Organizations and Companies.
                         </p>
                     </div>
 
@@ -70,7 +70,7 @@
                 <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
                     <div class="counters">
                         <img loading="lazy" src="{{ asset('images/icons/mongodb.svg') }}" alt="nodejs icon">
-                        <img loading="lazy" src="{{ asset('images/icons/expressjs.svg') }}" alt="nodejs icon">
+                        {{-- <img loading="lazy" src="{{ asset('images/icons/expressjs.svg') }}" alt="nodejs icon"> --}}
                         <img loading="lazy" src="{{ asset('images/icons/react.svg') }}" alt="nodejs icon">
                         <img loading="lazy" src="{{ asset('images/icons/nodejs.svg') }}" alt="nodejs icon">
                         <div class="counter">

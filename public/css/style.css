@@ -312,15 +312,15 @@ header .nav-link.auth-btn:hover {
 #hero {
     position: relative;
     background: linear-gradient(
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65),
             rgba(0, 0, 0, 0.9)
         ),
         url("/images/bg3.jpg") no-repeat;
     background-size: cover;
     background-position: center center;
-    padding: 10rem 0 2rem 0;
+    padding: 9rem 0 2rem 0;
     background-attachment: fixed;
 }
 
@@ -351,11 +351,14 @@ header .nav-link.auth-btn:hover {
     color: var(--red-1);
     font-style: italic;
 }
-#hero .hero-text p {
+#hero .hero-text .description {
     color: var(--light-0);
     opacity: 0.6;
     font-size: 1.3rem;
+    background-color: rgba(0, 0, 0, 0.9);
     font-weight: 500;
+    padding: 8px;
+    border-radius: 5px;
     letter-spacing: 0.6px;
     font-family: var(--prox);
 }

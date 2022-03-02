@@ -38,7 +38,7 @@
 
 <body>
     {{-- Navigation --}}
-    <header class="fixed-top">
+    <header class="fixed-top shadow">
         <nav id="navbar" class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('home') }}">A.<span>S</span></a>

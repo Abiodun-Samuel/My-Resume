@@ -274,6 +274,7 @@ header .nav-link.auth-btn:hover {
     padding-bottom: 0;
     background: var(--light-0);
 }
+
 .sticky-nav {
     color: var(--purple-3);
 }
@@ -290,6 +291,7 @@ header .nav-link.auth-btn:hover {
         margin-left: 0;
     }
 }
+
 /* Hero Page  */
 #hero {
     position: relative;
@@ -299,7 +301,7 @@ header .nav-link.auth-btn:hover {
             rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.85)
         ),
-        url("/images/bg3.jpg") no-repeat;
+        url("/images/new-bg.jpg") no-repeat;
     background-size: cover;
     background-position: center center;
     padding: 9rem 0 2rem 0;

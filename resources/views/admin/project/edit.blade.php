@@ -48,6 +48,7 @@
                                     <option value="Javascript">JavaScript</option>
                                     <option value="PHP">PHP</option>
                                     <option value="Laravel">Laravel</option>
+                                    <option value="MERN">M.E.R.N</option>
                                     <option value="React">React</option>
                                     <option value="CodeIgniter">CodeIgniter</option>
                                 </select>

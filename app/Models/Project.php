@@ -21,6 +21,8 @@ class Project extends Model
         'user_id',
         'project_link',
         'github_link',
+        'keywords',
+        'level'
     ];
     public function user()
     {

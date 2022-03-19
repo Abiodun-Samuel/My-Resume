@@ -53,10 +53,11 @@ class AdminProjectController extends Controller
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:4096',
             'title' => 'required|string',
             'description' => 'required|string',
-            'tech_stack' => 'required',
-            'tech_stack.*' => 'required|string',
+            'tech_stack' => 'required|string',
             'github_link' => 'required|url',
             'project_link' => 'required|url',
+            'keywords' => 'required|string',
+            'level' => 'required|string',
         ]);
 
         // process and save images 
@@ -95,6 +96,8 @@ class AdminProjectController extends Controller
             'github_link' => $request->github_link,
             'user_id' => auth()->user()->id,
             'slug' => Str::slug($request->title, '-'),
+            'level' => $request->level,
+            'keywords' => $request->keywords,
         ]);
 
         return back()->with('success', 'New project has been uploaded successfully');
@@ -141,10 +144,11 @@ class AdminProjectController extends Controller
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:4096',
             'title' => 'required|string',
             'description' => 'required|string',
-            'tech_stack' => 'required',
-            'tech_stack.*' => 'required|string',
+            'tech_stack' => 'required|string',
             'github_link' => 'required|url',
             'project_link' => 'required|url',
+            'keywords' => 'required|string',
+            'level' => 'required|string',
         ]);
 
         // process and save images 
@@ -177,11 +181,13 @@ class AdminProjectController extends Controller
                     'images' => json_encode($data),
                     'title' => $request->title,
                     'description' => $request->description,
-                    'tech_stack' => json_encode($request->tech_stack),
+                    'tech_stack' => $request->tech_stack,
                     'project_link' => $request->project_link,
                     'github_link' => $request->github_link,
                     'user_id' => auth()->user()->id,
                     'slug' => Str::slug($request->title, '-'),
+                    'level' => $request->level,
+                    'keywords' => $request->keywords,
                 ]);
             }
         } else {
@@ -191,11 +197,13 @@ class AdminProjectController extends Controller
                 'state' => $request->state,
                 'title' => $request->title,
                 'description' => $request->description,
-                'tech_stack' => json_encode($request->tech_stack),
+                'tech_stack' => $request->tech_stack,
                 'project_link' => $request->project_link,
                 'github_link' => $request->github_link,
                 'user_id' => auth()->user()->id,
                 'slug' => Str::slug($request->title, '-'),
+                'level' => $request->level,
+                'keywords' => $request->keywords,
             ]);
         }
         return redirect()->route('admin.project.index')->with('success', 'Project has been edited successfully');

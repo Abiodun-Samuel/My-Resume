@@ -47,8 +47,9 @@
                             <li><strong>Category</strong>: {{ $project->project_category }}</li>
                             <li><strong>Client</strong>: {{ $project->title }}</li>
                             <li><strong>Tech Stack</strong>:
-                                @foreach (json_decode($project->tech_stack) as $tech_stack)
-                                    <span class="mr-1"> {!! tech_value($tech_stack) !!} </span>
+                                @foreach (explode(',', $project->tech_stack) as $value)
+                                    <p class="d-inline-block small">
+                                        {{ Str::ucfirst($value) . ', ' }}</p>
                                 @endforeach
                             </li>
                             {{-- <li><strong>Project date</strong>: {{ $project->created_at }}</li> --}}
@@ -63,9 +64,9 @@
                 <div class="col-lg-6 col-md-6 my-4 d-flex align-items-stretch">
                     <div class="project-description" data-aos="fade-up" data-aos-delay="200">
                         <h3>Project Description</h2>
-                        <p>
-                            {{ $project->description }}
-                        </p>
+                            <p>
+                                {{ $project->description }}
+                            </p>
                     </div>
                 </div>
             </div>

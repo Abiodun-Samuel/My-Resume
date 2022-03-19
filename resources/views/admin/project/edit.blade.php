@@ -41,7 +41,7 @@
                         @method('PUT')
                         {{-- category and state --}}
                         <div class="form-row mb-3">
-                            <div class="col-6">
+                            <div class="col-4">
                                 <label for="project_category" class="text-secondary">Category</label>
                                 <select class="w-100" id="project_category" name="project_category">
                                     <option value="NodeJs">NodeJs</option>
@@ -53,11 +53,19 @@
                                     <option value="CodeIgniter">CodeIgniter</option>
                                 </select>
                             </div>
-                            <div class="col-6">
+                            <div class="col-4">
                                 <label class="text-secondary" for="state">State</label>
                                 <select class="w-100" id="state" name="state">
                                     <option value="demo">Demo</option>
                                     <option value="live">Live</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <label class="text-secondary" for="level">Level</label>
+                                <select class="w-100" id="levek" name="level">
+                                    <option value="Easy">Easy</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Hard">Hard</option>
                                 </select>
                             </div>
                         </div>
@@ -74,6 +82,7 @@
                             </div>
                         </div>
 
+                        <hr>
                         {{-- github link and project link --}}
                         <div class="form-row my-3">
                             <div class="col-6">
@@ -87,8 +96,23 @@
                         </div>
 
                         <hr>
+                        {{-- keywords --}}
+                        <div class="form-row my-3">
+                            <div class="col-12">
+                                <input class="w-100" type="text" name="keywords" placeholder="Tech Keywords"
+                                    value="{{ $project->keywords }}">
+                            </div>
+                        </div>
+
+                        <hr>
                         {{-- tect stack --}}
                         <div class="form-row my-3">
+                            <div class="col-12">
+                                <input class="w-100" type="text" name="tech_stack" placeholder="Tech Keywords"
+                                    value="{{ $project->tech_stack }}">
+                            </div>
+                        </div>
+                        {{-- <div class="form-row my-3">
                             <label class="control-label text-secondary">Tech Stack</label>
                             <div id="custom_button_styles">
                                 <div class="tabs">
@@ -235,7 +259,7 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <hr>
                         {{-- upload images --}}
                         <div class="form-row my-3">

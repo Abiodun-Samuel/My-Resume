@@ -35,7 +35,7 @@
                         @csrf
                         {{-- category and state --}}
                         <div class="form-row mb-3">
-                            <div class="col-6">
+                            <div class="col-4">
                                 <label for="project_category" class="text-secondary">Category</label>
                                 <select class="w-100" id="project_category" name="project_category">
                                     <option value="NodeJs">NodeJs</option>
@@ -47,11 +47,19 @@
                                     <option value="CodeIgniter">CodeIgniter</option>
                                 </select>
                             </div>
-                            <div class="col-6">
+                            <div class="col-4">
                                 <label class="text-secondary" for="state">State</label>
                                 <select class="w-100" id="state" name="state">
                                     <option value="demo">Demo</option>
                                     <option value="live">Live</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <label class="text-secondary" for="level">Level</label>
+                                <select class="w-100" id="levek" name="level">
+                                    <option value="Easy">Easy</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Hard">Hard</option>
                                 </select>
                             </div>
                         </div>
@@ -77,6 +85,14 @@
                             <div class="col-6">
                                 <input class="w-100" type="text" name="github_link" placeholder="Github Link"
                                     value="{{ old('github_link') }}">
+                            </div>
+                        </div>
+
+                        {{-- keywords --}}
+                        <div class="form-row my-3">
+                            <div class="col-12">
+                                <input class="w-100" type="text" name="keywords" placeholder="Tech Keywords"
+                                    value="{{ old('keywords') }}">
                             </div>
                         </div>
 

@@ -49,8 +49,9 @@
                                         <td>{{ $project->title }}</td>
                                         <td>{{ $project->state }}</td>
                                         <td>
-                                            @foreach (json_decode($project->tech_stack) as $tech_stack)
-                                                {!! tech_value($tech_stack) !!}
+                                            @foreach (explode(',', $project->tech_stack) as $value)
+                                                <p class="small p-1 bg-secondary my-1 text-white rounded d-inline-block">
+                                                    {{ $value }}</p>
                                             @endforeach
                                         </td>
                                         <td>
@@ -92,5 +93,4 @@
             $('#myTable').DataTable();
         });
     </script>
-
 @endpush

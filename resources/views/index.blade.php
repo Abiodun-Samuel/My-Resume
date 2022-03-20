@@ -5,8 +5,8 @@
     <div id="hero">
         <div class="container-fluid">
             <div class="row d-flex justify-content-center">
-                <div class="col-lg-6">
-                    <div class="hero-text mt-1 mb-5">
+                <div class="col-lg-7" data-aos="fade-up">
+                    <div class="hero-text mt-1 mb-5 p-3 shadow rounded" data-aos="fade-up" data-aos-delay="200">
                         <p class="hello">Hi There 👋,</p>
                         <h1> I'm <span>Samuel</span></h1>
                         <h2>Full Stack Web Developer.</h2>
@@ -41,7 +41,7 @@
     <section id="counts" class="counts">
         <div class="container">
             <div class="row d-flex align-items-stretch">
-                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
+                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center" data-aos="fade-up">
                     <div class="counters">
                         <img loading="lazy" src="{{ asset('images/icons/javascript.svg') }}" alt="javascript icon">
                         <div class="counter">
@@ -50,7 +50,7 @@
                         <p>Javascript</p>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
+                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center" data-aos="fade-up" data-aos-delay="50">
                     <div class="counters">
                         <img loading="lazy" src="{{ asset('images/icons/react.svg') }}" alt="react icon">
                         <div class="counter">
@@ -59,7 +59,7 @@
                         <p>React</p>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
+                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="counters">
                         <img loading="lazy" src="{{ asset('images/icons/nodejs.svg') }}" alt="nodejs icon">
                         <div class="counter">
@@ -68,7 +68,7 @@
                         <p>NodeJs</p>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
+                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center" data-aos="fade-up" data-aos-delay="150">
                     <div class="counters">
                         <img loading="lazy" src="{{ asset('images/icons/mongodb.svg') }}" alt="nodejs icon">
                         {{-- <img loading="lazy" src="{{ asset('images/icons/expressjs.svg') }}" alt="nodejs icon"> --}}
@@ -89,7 +89,7 @@
                         <p>PHP</p>
                     </div>
                 </div> --}}
-                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
+                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="counters">
                         <img loading="lazy" src="{{ asset('images/icons/laravel.svg') }}" alt="laravel icon">
 
@@ -99,7 +99,7 @@
                         <p>Laravel</p>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center">
+                <div class="col-lg-2 col-md-3 col-sm-4 xs text-center" data-aos="fade-up" data-aos-delay="250">
                     <div class="counters">
                         <img loading="lazy" src="{{ asset('images/icons/codeigniter.svg') }}" alt="codeigniter icon">
 
@@ -117,7 +117,7 @@
     {{-- about me section --}}
     <div class="header">
         <div class="container d-flex justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-lg-8" data-aos="zoom-in">
                 <h2 class="text-center">About Me</h2>
                 <p>
                     I'm a performance-driven and self-motivated developer with extensive experience designing,
@@ -133,7 +133,7 @@
     <section id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 my-2 d-flex justify-content-center">
+                <div class="col-lg-5 my-2 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="50">
 
                     <div class="about-icons pt-4">
                         <a href="https://web.facebook.com/psalmzie007">
@@ -169,7 +169,7 @@
                             alt="Developer Abiodun Samuel" title="Developer Abiodun Samuel" width="311px" height="350px">
                     </div>
                 </div>
-                <div class="col-lg-7 my-2">
+                <div class="col-lg-7 my-2" data-aos="fade-up" data-aos-delay="100">
                     <div class="about-text">
                         <h4>My Work Ethics</h4>
                         <ul>
@@ -220,7 +220,7 @@
     {{-- portfolio section --}}
     <div id="portfolio-header" class="header">
         <div class="container d-flex justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-lg-8" data-aos="zoom-in">
                 <h2 class="text-center">Portfolio</h2>
                 <p>
                     Here's a catalogue of my projects executed over the years as a Designer | Developer. I've
@@ -287,7 +287,7 @@
     {{-- contact section --}}
     <div class="header">
         <div class="container d-flex justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-lg-8" data-aos="zoom-in">
                 <h2 class="text-center">Contact Me</h2>
                 <p> Do you have an enquiry? Do you have a project that requires my expertise? - I'm available. Feel
                     free to

@@ -7,6 +7,11 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-7" data-aos="fade-up">
                     <div class="hero-text mt-1 mb-5 p-3 shadow rounded" data-aos="fade-up" data-aos-delay="200">
+                        <img loading="lazy" class="hero-one" src="{{ url('/images/icons/flower.png') }}"
+                            alt="design">
+                        <img loading="lazy" class="hero-two" src="{{ url('/images/icons/flower.png') }}"
+                            alt="design">
+
                         <p class="hello">Hi There 👋,</p>
                         <h1> I'm <span>Samuel</span></h1>
                         <h2>Full Stack Web Developer.</h2>
@@ -21,7 +26,8 @@
 
                     <div class="thim-click-to-bottom mt-5 d-flex justify-content-center align-items-center">
                         <a href="#about" class="scroll d-flex justify-content-center align-items-center">
-                            <img loading="lazy" class='no-img' src="{{ asset('images/icons/down-arrow.png') }}" alt="">
+                            <img loading="lazy" class='no-img' src="{{ asset('images/icons/down-arrow.png') }}"
+                                alt="go to about section">
                         </a>
                     </div>
                 </div>

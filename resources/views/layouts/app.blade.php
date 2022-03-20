@@ -37,6 +37,20 @@
 </head>
 
 <body>
+    <div id="preloader">
+        <div class="col-lg-6">
+            <div id="centerdiv">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     {{-- Navigation --}}
     <header class="fixed-top shadow">
         <nav id="navbar" class="navbar navbar-expand-lg">
@@ -105,21 +119,6 @@
             </g>
         </svg>
     </a>
-
-    <div id="preloader">
-        <div class="col-lg-6">
-            <div id="centerdiv">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
     <!-- JavaScript Libraries -->
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}

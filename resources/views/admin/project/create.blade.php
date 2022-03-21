@@ -100,7 +100,7 @@
                         {{-- tect stack --}}
                         <div class="form-row my-3">
                             <div class="col-12">
-                                <input class="w-100" type="text" name="tech_stack" placeholder="Tech Keywords"
+                                <input class="w-100" type="text" name="tech_stack" placeholder="Tech Stack"
                                     value="{{ old('tech_stack') }}">
                             </div>
                         </div>

@@ -98,13 +98,10 @@
 
                         <hr>
                         {{-- tect stack --}}
-
-                        <hr>
-                        {{-- tect stack --}}
                         <div class="form-row my-3">
                             <div class="col-12">
                                 <input class="w-100" type="text" name="tech_stack" placeholder="Tech Keywords"
-                                    value="{{ $project->tech_stack }}">
+                                    value="{{ old('tech_stack') }}">
                             </div>
                         </div>
                         {{-- <div class="form-row my-3">

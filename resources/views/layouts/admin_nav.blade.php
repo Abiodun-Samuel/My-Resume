@@ -244,6 +244,38 @@
                                 </li>
                             </ul>
                         </li>
+                        {{-- category section --}}
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i><span class="iconify nav-icon" data-icon="zondicons:portfolio"></span></i>
+                                <p>
+                                    Category
+                                    <span class="iconify right" data-icon="bx:bx-left-arrow"></span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.project.create') }}" class="nav-link">
+                                        <i>
+                                            <span class="iconify nav-icon" data-icon="whh:newwindow"></span>
+                                        </i>
+                                        <p>
+                                            New Category
+                                            <span class="right badge badge-danger">New</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('admin.project.index') }}" class="nav-link">
+                                        <i>
+                                            <span class="iconify nav-icon"
+                                                data-icon="eos-icons:cluster-management"></span>
+                                        </i>
+                                        <p>Manage Category</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
 
 
 

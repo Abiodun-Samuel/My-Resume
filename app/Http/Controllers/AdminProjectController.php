@@ -74,7 +74,8 @@ class AdminProjectController extends Controller
                 $path = storage_path('app/public/images/projects/' . $request->project_category . '/' . $request->title);
 
                 if (!File::isDirectory($path)) {
-                    File::makeDirectory($path, 0777, true, true);
+                    File::makeDirectory($path, true, true);
+                    // File::makeDirectory($path, 0777, true, true);
                     $image_resize->save($path . '/' . $filename, 100);
                 } else {
                     $image_resize->save($path . '/' . $filename, 100);
@@ -165,7 +166,8 @@ class AdminProjectController extends Controller
                 $path = storage_path('app/public/images/projects/' . $request->project_category . '/' . $request->title);
 
                 if (!File::isDirectory($path)) {
-                    File::makeDirectory($path, 0777, true, true);
+                    // File::makeDirectory($path, 0777, true, true);
+                    File::makeDirectory($path, true, true);
                     $image_resize->save($path . '/' . $filename, 100);
                 } else {
                     $image_resize->save($path . '/' . $filename, 100);

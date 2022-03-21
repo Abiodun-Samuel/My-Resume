@@ -98,7 +98,16 @@
 
                         <hr>
                         {{-- tect stack --}}
+
+                        <hr>
+                        {{-- tect stack --}}
                         <div class="form-row my-3">
+                            <div class="col-12">
+                                <input class="w-100" type="text" name="tech_stack" placeholder="Tech Keywords"
+                                    value="{{ $project->tech_stack }}">
+                            </div>
+                        </div>
+                        {{-- <div class="form-row my-3">
                             <label class="control-label text-secondary">Tech Stack</label>
                             <div id="custom_button_styles">
                                 <div class="tabs">
@@ -245,7 +254,7 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <hr>
                         {{-- upload images --}}
                         <div class="form-row my-3">

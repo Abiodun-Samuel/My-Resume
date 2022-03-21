@@ -92,7 +92,7 @@ class AdminProjectController extends Controller
             'images' => json_encode($data),
             'title' => $request->title,
             'description' => $request->description,
-            'tech_stack' => json_encode($request->tech_stack),
+            'tech_stack' => $request->tech_stack,
             'project_link' => $request->project_link,
             'github_link' => $request->github_link,
             'user_id' => auth()->user()->id,

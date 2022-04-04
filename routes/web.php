@@ -17,6 +17,7 @@ require __DIR__ . '/auth.php';
 Route::get('/', [HomePageController::class, 'index'])->name('home');
 
 // ContactController
+Route::get('/contact', [ContactPageController::class, 'index'])->name('contact');
 Route::post("/send_message", [ContactController::class, 'store'])->name('send_message');
 
 //Project Page Controller
@@ -29,9 +30,6 @@ Route::get('/projects/{project:slug}', [ProjectPageController::class, 'show'])->
 // blog 
 Route::get('/blog', [BlogPageController::class, 'index'])->name('blog.home');
 Route::get('/blog/{blog:slug}', [BlogPageController::class, 'show'])->name('blog.show');
-
-
-Route::get('/contact', [ContactPageController::class, 'index'])->name('contact')->middleware('auth');
 
 // Admin Routes
 Route::get('/admin', [AdminPageController::class, 'index'])->name('admin.home')->middleware('auth', 'Is_Admin');

@@ -81,11 +81,11 @@
                         @auth
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
-                                <button class="nav-link auth-btn px-3">Logout</button>
+                                <button class="nav-link auth-btn px-4">Logout</button>
                             </form>
                         @endauth
                         @guest
-                            <a class="nav-link auth-btn" href="{{ route('login') }}"> Login </a>
+                            <a class="nav-link auth-btn px-4" href="{{ route('login') }}"> Login </a>
                         @endguest
                     </div>
                 </div>

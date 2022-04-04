@@ -323,20 +323,22 @@ header .navbar-brand span {
 }
 header .nav-link:active,
 header .nav-link:hover {
-    color: var(--black-3);
+    color: var(--black-4);
 }
 header .nav-link.auth-btn {
-    color: var(--red-1);
-    background-color: inherit;
+    color: var(--light-0);
+    background-color: var(--red-1);
     box-shadow: var(--shadow-1);
     transition: 500ms;
+    border-radius: 1rem;
     text-align: center;
     font-weight: 500;
     border: 1.25px solid var(--red-1);
 }
 header .nav-link.auth-btn:hover {
-    color: var(--black-3);
-    border-color: 1.25px solid var(--black-3);
+    color: var(--light-0);
+    background-color: var(--red);
+    border: 1.25px solid var(--red);
 }
 
 .sticky {

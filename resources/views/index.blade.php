@@ -183,19 +183,27 @@
                 </div>
                 <div class="col-lg-7 col-md-6 my-2" data-aos="fade-up" data-aos-delay="100">
                     <div class="about-text">
+                        <h4><b>Tech Stack</b></h4>
+
                         {{-- <h4>My Work Ethics</h4> --}}
                         <ul>
-                            <li class="mb-2">
-                                <b>Tech Stack:</b> HTML5, CSS3, Bootstrap, TailwindCSS, JavaScript, TypeScript, JQuery,
+                            <li class="mb-3">
+                                <b>Front-End:</b> HTML5, CSS3, Bootstrap, TailwindCSS, JavaScript, TypeScript, JQuery,
                                 ReactJS,
-                                Redux, NextJS, Material UI, Firebase, GraphQL, NodeJs, ExpressJS, Docker, PHP, Laravel,
-                                CodeIgniter, MongoDB, MySQL & PostgresSQL. Vue & React-Native(in view)
+                                Redux, NextJS, Material UI.
                             </li>
-                            <li class="mt-2">
+                            <li class="my-3">
+                                <b>Back-End:</b> Firebase, GraphQL, NodeJs, ExpressJS, Docker, PHP, Laravel,
+                                CodeIgniter, MongoDB, MySQL & PostgresSQL.
+                            </li>
+                            <li class="my-3">
+                                <b>Database:</b> MongoDB, MySQL & PostgresSQL.
+                            </li>
+                            {{-- <li class="mt-2">
                                 I write high quality, well-documented, Front-end/Back-end codes with an emphasis on
                                 efficiency, ease of maintenance
                                 and compatibility, engaging the best coding practices.
-                            </li>
+                            </li> --}}
                             {{-- <li>
                                 I'm quite familiar with GitHub, and Git flow methodology also with
                                 in-depth understanding of the entire web development processes (requirements, design,

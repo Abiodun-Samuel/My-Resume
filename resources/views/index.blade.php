@@ -188,13 +188,14 @@
                         {{-- <h4>My Work Ethics</h4> --}}
                         <ul>
                             <li class="mb-3">
-                                <b>Front-End:</b> HTML5, CSS3, Bootstrap, TailwindCSS, JavaScript, TypeScript, JQuery,
+                                <b>Front-End:</b> HTML5, CSS3, Bootstrap, TailwindCSS, Material UI, Chakra UI JavaScript,
+                                TypeScript, JQuery,
                                 ReactJS,
-                                Redux, NextJS, Material UI.
+                                Redux, NextJS.
                             </li>
                             <li class="my-3">
                                 <b>Back-End:</b> Firebase, GraphQL, NodeJs, ExpressJS, Docker, PHP, Laravel,
-                                CodeIgniter, MongoDB, MySQL & PostgresSQL.
+                                CodeIgniter.
                             </li>
                             <li class="my-3">
                                 <b>Database:</b> MongoDB, MySQL & PostgresSQL.

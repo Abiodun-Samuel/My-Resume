@@ -49,6 +49,7 @@
     <div id="counts" class="counts">
         <div class="container">
             <div class="row d-flex align-items-stretch">
+                {{-- <div class="counter-skill"></div> --}}
                 <div class="col-lg-2 col-md-3 my-1 col-sm-4 xs text-center">
                     <a target="_blank" href="{{ url('projects/search?query=Javascript') }}">
                         <div class="counters">

@@ -101,8 +101,35 @@ AOS.init({
         ],
     });
 
-    $(".like").on("click", () => {
-        console.log("clicked");
+    $(".counter-skill").slick({
+        slidesToShow: 6,
+        slidesToScroll: 2,
+        arrows: false,
+        dots: false,
+        centerMode: true,
+        autoplay: true,
+        centerPadding: "10px",
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        autoplaySpeed: 1000,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                    centerPadding: "10px",
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2.5,
+                    slidesToScroll: 1,
+                    centerPadding: "10px",
+                },
+            },
+        ],
     });
 
     var base_url = $("#base_url").val();
